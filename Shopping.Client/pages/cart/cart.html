@@ -1,0 +1,154 @@
+﻿<!--*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+*************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping Cart</title>
+
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/cart/cart.css" rel="stylesheet" />
+
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+    <script src="/Scripts/underscore.js"></script>
+
+    <script src="/js/offline_services.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/binding.js"></script>
+    <script src="/js/designModeShim.js"></script>
+    <script src="/controls/simplelist.js"></script>
+
+    <script src="/pages/cart/cartViewModel.js"></script>
+    <script src="/pages/cart/cart.js"></script>
+</head>
+<body>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment cartpage">
+        <progress class="cartLoading"></progress>
+
+        <header aria-label="Header content" role="banner">
+            <hgroup class="titlearea">
+                <h1 class="pagetitle cartshow">Shopping Cart</h1>
+                <h1 class="pagetitle carthide">Order Confirmation</h1>
+            </hgroup>
+        </header>
+        <nav>
+            <button type="button" id="backButton" aria-label="Back"></button>
+        </nav>
+        <section aria-label="Main content" role="main">
+            <h3 class="cartshow">Your Cart Items</h3>
+            <h3 class="carthide">Your Final Cart</h3>
+            <div class="cart">
+
+                <table data-win-bind="style.display: HasPayment Shopping.Binding.visibilityConverter" style="display: none;">
+                    <tr>
+                        <td><em>Payment Method</em></td>
+                        <td><a href="/pages/billingEntry/billingEntry.html">[edit]</a></td>
+                    </tr>
+                    <tr>
+                        <td data-win-bind="textContent: PaymentInfo.CardType"></td>
+                        <td data-win-bind="textContent: PaymentInfo.CardNumber"></td>
+                    </tr>
+                    <tr>
+                        <td>Expiration </td>
+                        <td><span data-win-bind="textContent: PaymentInfo.ExpirationMonth"></span>/<span data-win-bind="textContent: PaymentInfo.ExpirationYear"></span> </td>
+                    </tr>
+                </table>
+                <div class="billingAddress" data-win-bind="style.display: HasAddresses Shopping.Binding.visibilityConverter" style="display: none;">
+                    <h4>Billing Address </h4>
+                    <p>
+                        <span data-win-bind="textContent: BillingAddress.FirstName"></span>
+                        <span data-win-bind="textContent: BillingAddress.LastName"></span>
+                        <br />
+                        <span data-win-bind="textContent: BillingAddress.Line1"></span>
+                        <br />
+                        <span data-win-bind="textContent: BillingAddress.Line2"></span>
+                        <br />
+                        <span data-win-bind="textContent: BillingAddress.City"></span>, <span data-win-bind="textContent: BillingAddress.State"></span> <span data-win-bind="textContent: BillingAddress.Zip"></span>
+                    </p>
+                </div>
+                <div class="shippingAddress" data-win-bind="style.display: HasAddresses Shopping.Binding.visibilityConverter" style="display: none;">
+                    <h4>Shipping Address </h4>
+                    <div class="sameAddress" data-win-bind="style.display: SameAddresses Shopping.Binding.visibilityConverter">(same as billing)</div>
+                    <p>
+                        <span data-win-bind="textContent: ShippingAddress.FirstName"></span>
+                        <span data-win-bind="textContent: ShippingAddress.LastName"></span>
+                        <br />
+                        <span data-win-bind="textContent: ShippingAddress.Line1"></span>
+                        <br />
+                        <span data-win-bind="textContent: ShippingAddress.Line2"></span>
+                        <br />
+                        <span data-win-bind="textContent: ShippingAddress.City"></span>, <span data-win-bind="textContent: ShippingAddress.State"></span> <span data-win-bind="textContent: ShippingAddress.Zip"></span>
+                    </p>
+                </div>
+
+
+
+                <div class="costs">
+                    <table>
+                        <tr>
+                            <th><em>Cost:</em></th>
+                        </tr>
+                        <tr>
+                            <th>Subtotal:</th>
+                            <td><span class="subTotal" data-win-bind="textContent: subTotal Shopping.Binding.currencyConverter"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Tax:</th>
+                            <td><span class="tax" data-win-bind="textContent: tax Shopping.Binding.currencyConverter"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Shipping:</th>
+                            <td><span class="shipping" data-win-bind="textContent: shipping Shopping.Binding.currencyConverter"></span></td>
+                        </tr>
+                    </table>
+                    <div class="total">
+                        <label>Total:</label>
+                        <div class="totalPrice" data-win-bind="textContent: total Shopping.Binding.currencyConverter"></div>
+                    </div>
+                </div>
+                <button class="checkout">Checkout</button>
+                <button class="submitOrder">Submit Order</button>
+                <button class="continue">Continue Shopping</button>
+            </div>
+
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="itemColumn">
+                    <hgroup>
+                        <h2 data-win-bind="textContent: Name"></h2>
+                        <h3>$<span data-win-bind="textContent: Price"></span> x
+                            <input type="text" class="quantity" data-win-bind="value: Quantity" />
+                            = $<span data-win-bind="textContent: this Shopping.ViewModel.TotalItemPriceConverter"></span></h3>
+                    </hgroup>
+                    <div class="itemImage">
+                        <img data-win-bind="src: MainImage; alt: Name" />
+                    </div>
+                    <div class="itemOptions">
+                        <div>Size: <span data-win-bind="textContent: Size"></span></div>
+                        <div>Color: <span data-win-bind="textContent: Color"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="items" data-win-control="Shopping.Controls.SimpleList">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

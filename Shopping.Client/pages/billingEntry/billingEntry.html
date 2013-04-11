@@ -1,0 +1,308 @@
+﻿<!--*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+*************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Billing and Shipping Entry</title>
+
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/billingEntry/billingEntry.css" rel="stylesheet" />
+
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+    <script src="/Scripts/underscore.js"></script>
+
+    <script src="/js/offline_services.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/binding.js"></script>
+    <script src="/js/designModeShim.js"></script>
+    <script src="/controls/simplelist.js"></script>
+
+    <script src="/pages/billingEntry/billingEntryViewModel.js"></script>
+    <script src="/pages/billingEntry/billingEntry.js"></script>
+</head>
+<body>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment billingEntry">
+        <header aria-label="Header content" role="banner">
+
+            <hgroup class="titlearea">
+                <h1 class="pagetitle">Purchasing Details</h1>
+            </hgroup>
+
+        </header>
+        <nav>
+            <button type="button" id="backButton" aria-label="Back"></button>
+        </nav>
+        <section aria-label="Main content" role="main">
+
+            <fieldset class="billingAddress">
+                <!--<h1>Payment Information</h1>-->
+                <legend>Bill To </legend>
+                <label class="field-first">First Name </label>
+                <label class="field-last">Last Name </label>
+                <input type="text" id="billing_first_name" data-win-bind="value: BillingAddress.FirstName oneTime" />
+
+                <input type="text" id="billing_last_name" data-win-bind="value: BillingAddress.LastName oneTime" />
+                <label class="field-address">
+                    Address line 1
+                </label>
+                <input type="text" id="billing_line1"
+                    data-win-bind="value: BillingAddress.Line1 oneTime" />
+                <label class="field-address">
+                    Address line 2
+                </label>
+                <input type="text" id="billing_line2"
+                    data-win-bind="value: BillingAddress.Line2 oneTime" />
+                <label class="field-city">City </label>
+                <label class="field-state">
+                    State
+                </label>
+                <label class="field-zip">Zip Code </label>
+                <input type="text" id="billing_city" data-win-bind="value: BillingAddress.City oneTime" />
+
+                <select id="billing_state" data-win-bind="value: BillingAddress.State Shopping.Binding.setSelectedIndex">
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AR</option>
+                    <option>AZ</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DC</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IA</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>MA</option>
+                    <option>MD</option>
+                    <option>ME</option>
+                    <option>MI</option>
+                    <option>MO</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>NE</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NV</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VA</option>
+                    <option>VT</option>
+                    <option>WA</option>
+                    <option>WI</option>
+                    <option>WV</option>
+                    <option>WY</option>
+                </select>
+
+                <input type="text" id="billing_zip" data-win-bind="value: BillingAddress.Zip" /><br
+                    style="clear: left;" />
+            </fieldset>
+
+            <fieldset class="shippingAddress">
+                <legend>Ship To </legend>
+
+                <input type="checkbox" id="same_addresses" data-win-bind="checked: SameAddresses" />
+                <label for="same_addresses">Same as billing address</label>
+
+                <label class="field-first">First Name</label>
+                <label class="field-last">Last Name</label>
+                <input type="text" id="shipping_first_name" data-win-bind="value: ShippingAddress.FirstName oneTime" />
+                <input type="text" id="shipping_last_name" data-win-bind="value: ShippingAddress.LastName oneTime" />
+                <label class="field-address">
+                    Address line 1</label>
+                <input type="text" id="shipping_line1" data-win-bind="value: ShippingAddress.Line1" />
+                <label class="field-address">
+                    Address line 2</label>
+                <input type="text" id="shipping_line2" data-win-bind="value: ShippingAddress.Line2" />
+                <label class="field-city">City</label><label class="field-state">
+                    State</label>
+                <label class="field-zip">Zip Code</label>
+                <input type="text" id="shipping_city" data-win-bind="value: ShippingAddress.City" />
+
+                <select id="shipping_state" data-win-bind="value: ShippingAddress.State Shopping.Binding.setSelectedIndex">
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AR</option>
+                    <option>AZ</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DC</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IA</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>MA</option>
+                    <option>MD</option>
+                    <option>ME</option>
+                    <option>MI</option>
+                    <option>MO</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>NE</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NV</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VA</option>
+                    <option>VT</option>
+                    <option>WA</option>
+                    <option>WI</option>
+                    <option>WV</option>
+                    <option>WY</option>
+                </select>
+
+                <input type="text" id="shipping_zip" data-win-bind="value: ShippingAddress.Zip" />
+                <br style="clear: left;" />
+            </fieldset>
+            <div class="payment">
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <label for="card_number">
+                        Card Number
+                        <br />
+                        <span>(This is a demo, enter random numbers)</span></label>
+                    <input type="text" id="card_number" data-win-bind="value: PaymentInfo.CardNumber">
+                    <div id="dumb">
+                        <label class="type" for="card_type">
+                            Card Type
+                        </label>
+                        <select id="card_type" data-win-bind="value: PaymentInfo.CardType Shopping.Binding.setSelectedIndex">
+
+                            <option value="Visa">Visa</option>
+                            <option value="MC">Mastercard</option>
+                            <option value="AMEX">American Express</option>
+                            <option value="discover">Discover</option>
+                        </select>
+                    </div>
+
+
+
+                    <label class="CVV" for="card_cvv">
+                        C.V.V.</label>
+                    <input type="text" id="card_cvv" data-win-bind="value: PaymentInfo.CvvCode">
+                    <label class="expires">
+                        Expires</label>
+                    <select id="card_month" class="month" data-win-bind="value: PaymentInfo.ExpirationMonth Shopping.Binding.setSelectedIndex">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    <select id="card_year" class="year" data-win-bind="value: PaymentInfo.ExpirationYear Shopping.Binding.setSelectedIndex">
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                    </select>
+
+
+                </fieldset>
+                <div class="terms">
+                    <input type="checkbox" id="terms" data-win-bind="checked: Terms" /><label for="terms">
+                        I agree to the terms and conditions</label>
+                </div>
+
+                <button class="continue">Continue</button>
+                <br />
+                <button class="demo">Demo Data</button>
+
+            </div>
+
+            <article>
+                <h3>Terms and Conditons</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies tincidunt
+					dui non molestie. Duis nulla odio, euismod quis consectetur ut, ornare nec urna.
+					Etiam dapibus tincidunt augue ornare viverra. Ut euismod pulvinar tellus eu tempor.
+					Sed rutrum libero eget nulla placerat sed venenatis velit auctor. Phasellus dignissim
+					eros nec nibh feugiat ultrices. Aliquam erat volutpat. Vestibulum ante ipsum primis
+					in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vitae ipsum vel massa
+					consequat tempus. Ut eleifend magna eget lectus hendrerit aliquam. Cum sociis natoque
+					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Aenean mattis arcu ut neque faucibus posuere. Nulla facilisi. Duis fermentum varius massa, non sodales
+					sem ullamcorper vitae. Cras malesuada urna in augue congue quis dapibus justo ultrices.
+					Pellentesque dapibus justo et diam mollis ullamcorper. Vestibulum rhoncus porta
+					urna eu laoreet. Quisque leo magna, pulvinar ac sagittis ac, congue a lectus. Morbi
+					condimentum aliquet rhoncus. Praesent aliquam euismod semper. Nunc id risus at diam
+					aliquam commodo. Aenean mauris nunc, tincidunt vitae tincidunt ut, laoreet ac nulla.
+					Nunc gravida fringilla enim vel ornare. Aliquam mollis euismod lorem non feugiat.
+					Nunc arcu ante, porttitor non vehicula vitae, facilisis ullamcorper risus. Mauris
+					dolor leo, laoreet sit amet sodales non, gravida eget ipsum. Ut leo quam, eleifend
+					in malesuada malesuada, accumsan vel sem. 
+                </p>
+
+            </article>
+
+        </section>
+    </div>
+</body>
+</html>

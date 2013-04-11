@@ -1,0 +1,392 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+.billingEntry nav {
+    left: -5px;
+}
+
+.billingEntry section {
+    height: 630px;
+    width: 1200px;
+    display: -ms-grid;
+    -ms-grid-columns: 480px 480px 235px;
+    -ms-grid-rows: 350px 200px;
+    padding: 20px;
+  
+    -ms-transform-origin: top;
+    background-color: #eee;
+    margin-top: 50px;
+    margin-left: 70px;
+    overflow: hidden;
+}
+
+.billingEntry .billingAddress {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    padding-right: 15px;
+}
+
+.billingEntry .billingAddress h1 {
+    font-size: 20pt;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    height: 31px;
+    
+}
+
+.billingEntry .shippingAddress {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    padding-right: 15px;
+}
+
+.billingEntry .payment {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+}
+
+.billingEntry article {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
+    margin-top: 10px;
+    padding-right: 100px;
+    -ms-transform: none;
+}
+
+
+.billingEntry input {
+    width: 50%;
+    display: block;
+}
+
+.billingEntry legend {
+    font-weight: 600;
+    font-size: 14pt;
+    margin-bottom: 20px;
+   
+}
+
+.billingEntry fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    -ms-transform: none;
+}
+
+.billingEntry h1 {
+    clear: both;
+    padding: 5px 0px 10px 0px;
+}
+
+.billingEntry label {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0;
+    color: #000;
+    font-weight: bold;
+
+    margin: 3px 0 2px 0;
+}
+
+.billingEntry input, .billingEntry select {
+    display: block;
+    margin: 5px 5px 5px 0;
+}  
+.billingEntry select {
+    float: left;
+    display: block;
+}
+
+.billingEntry label.field-first,
+.billingEntry label.field-last,
+.billingEntry label.field-city,
+.billingEntry label.CVV {
+    float: left;
+    width: 210px;
+}
+
+.billingEntry #billing_first_name,
+.billingEntry #billing_last_name,
+.billingEntry #billing_city,
+.billingEntry #shipping_first_name,
+.billingEntry #shipping_last_name,
+.billingEntry #shipping_city
+ {
+    float: left;
+    width: 200px;
+    
+  
+}
+.billingEntry .shippingAddress .field-first{
+    margin-top: 15px;
+}
+.billingEntry .shippingAddress legend,
+.billingEntry label.terms {
+    float: left;
+    padding: 0px;
+    width: 100px;
+
+}
+
+.billingEntry .shippingAddress legend {
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.billingEntry .shippingAddress label[for=same_addresses] {
+    font-size: 10pt;
+    text-transform: uppercase;
+    font-weight: 100;
+    width: 200px;
+    float: left;
+    padding-bottom: 10px;
+}
+
+
+.billingEntry label.field-state {
+    float: left;
+    margin-right: 5px;
+    width: 70px;
+}
+
+
+.billingEntry label.field-zip {
+    float: left;
+    width: 100px;
+}
+
+.billingEntry #billing_zip, .billingEntry #shipping_zip {
+    float: left;
+    width: 120px;
+}
+
+.billingEntry #billing_line1, 
+.billingEntry #billing_line2, 
+.billingEntry #shipping_line1, 
+.billingEntry #shipping_line2
+{
+    width: 410px;
+    float: left;
+  
+}
+.billingEntry label.field-address {
+    float: left;
+    width: 400px;
+    padding: 0px;
+} 
+
+
+.billingEntry input[type=checkbox] {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    width: 30px;
+    display: inline;
+    border-width: 1px;
+}
+
+.billingEntry #same_addresses {
+
+    padding-bottom: 20px;
+}
+
+.billingEntry .payment input[type=checkbox] {
+    margin: 40px 0 30px 0;
+}
+.billingEntry .payment label[for=terms] {
+    color: #666;
+    font-weight: 100;
+    line-height: 10pt;
+    display: inline;
+}
+.billingEntry #card_number{
+    float: left;
+    width: 210px;
+}
+.billingEntry .payment label span{
+    font-size: 10pt;
+    font-weight: 100;
+    color: #555
+}
+.billingEntry label.CVV,
+.billingEntry label.type, #dumb {
+    float: left;
+
+    width: 105px;
+}
+
+.billingEntry #card_cvv {
+    float: left;
+    width: 100px;
+    padding: 0;
+
+}
+
+.billingEntry #card_type{
+   
+    float: left;
+    width: 100px;
+    padding: 0;
+}
+
+
+#dumb label.type {
+
+    padding: 0;
+}
+
+
+.billingEntry .payment .expires {
+    padding: 0;
+    width: 200px;
+    float: left;
+}
+
+
+.billingEntry .month,
+.billingEntry .year {
+    display: block;
+    float: left;
+    width: 100px;
+    padding: 0px;
+
+}
+.billingEntry .month{margin-right: 5px;}
+
+.billingEntry p {
+    column-count: 3;
+    font-size: 10pt;
+    column-gap: 25px;
+}
+
+.billingEntry h3 {
+    font-size: 20pt;
+    font-weight: 100;
+}
+.billingEntry section button {
+    margin-top: 20px;
+    width: 150px;
+    margin: 20px auto;
+    
+}
+
+.billingEntry .demo {
+    background-color: #bfbfbf;
+    color: #333;
+    border: 1px solid #333;
+    height: auto;
+    padding: 8px 10px;
+}
+
+.billingEntry .demo:hover {
+    background-color: #aaa;
+}
+
+@media (-ms-view-state: snapped) {
+    .billingEntry section {
+        padding: 0;
+        margin: 0;
+        display: block;
+        transform: none;
+        overflow-y: visible;
+        background-color: transparent;
+    }
+    .billingEntry hgroup {
+        margin-top: 0;
+    }
+
+    .billingEntry header h1 {
+        font-size: 20pt;
+        font-weight: 600;
+        -ms-transform: none;
+        overflow: visible;
+    }
+
+    .billingEntry fieldset {
+        width: 280px;
+        -ms-transform: none;
+    }
+    
+     .billingEntry input, .billingEntry select {
+    display: block;
+    margin: 10px 5px 10x 0;
+}  
+
+    .billingEntry label.field-first,
+    .billingEntry label.field-last,
+    .billingEntry label.field-city,
+    .billingEntry label.field-email,
+    .billingEntry label.field-phone,
+    .billingEntry label.CVV {
+        float: none;
+        margin: 0px 10px 0px 0px;
+        width: 220px;
+    }
+     .billingEntry label.field-first,
+      .billingEntry label.field-city{
+         position: relative;
+         top: 15px;
+
+     }
+     .billingEntry label.field-last,
+     .billingEntry label.field-state,
+     .billingEntry label.field-zip
+
+     {
+         position: relative;
+         top: 55px;
+     }
+
+
+    .billingEntry #billing_last_name,
+    .billingEntry #billing_state,
+    .billingEntry #billing_zip,
+    .billingEntry #shipping_last_name,
+    .billingEntry #shipping_state, 
+        .billingEntry #shipping_zip{
+        margin-top: 15px;
+    }
+    .billingEntry p {
+        column-count: 1;
+        width: 280px;
+    }
+
+    .billingEntry article {
+        padding: none;
+       }
+
+    .billingEntry section button {
+
+        margin-bottom: 0;
+    }
+
+
+    .billingEntry label.field-address input {
+        width: 220px;
+        float: none;
+    }
+    .billingEntry .shippingAddress legend {
+        margin-right: 0;
+    }
+
+    .orderConfirmation .cart .costs {
+     
+       margin-left: 40px;
+    
+}
+    .billingEntry #card_type{
+        margin-top: 0;
+    }
+}

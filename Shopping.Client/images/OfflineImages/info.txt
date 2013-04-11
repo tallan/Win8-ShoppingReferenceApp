@@ -1,0 +1,1 @@
+﻿All of the Offline images are actually 'Linked files' in Visual Studio and they can be found in the Shopping.WebClient/Images folder.

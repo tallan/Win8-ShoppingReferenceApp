@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E804859-FA2F-4299-95D7-CF3789D4A5B2}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ECommerce.WebApi</RootNamespace>
+    <AssemblyName>ECommerce.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName></SccProjectName>
+    <SccLocalPath></SccLocalPath>
+    <SccAuxPath></SccAuxPath>
+    <SccProvider></SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Data\CartRepository.cs" />
+    <Compile Include="Data\CatalogRepository.cs" />
+    <Compile Include="Data\IPathResolver.cs" />
+    <Compile Include="Data\ProductsRepository.cs" />
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\RepositoryBase.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Catalog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Appbar\head.png" />
+    <Content Include="Images\Appbar\leg.png" />
+    <Content Include="Images\Appbar\neck.png" />
+    <Content Include="Images\Appbar\shoulder.png" />
+    <Content Include="Images\Appbar\sole.png" />
+    <Content Include="Images\Areas\1_head.png" />
+    <Content Include="Images\Areas\1_leg.png" />
+    <Content Include="Images\Areas\1_neck.png" />
+    <Content Include="Images\Areas\1_shoulder.png" />
+    <Content Include="Images\Areas\1_sole.png" />
+    <Content Include="Images\Areas\2_head.png" />
+    <Content Include="Images\Areas\2_leg.png" />
+    <Content Include="Images\Areas\2_neck.png" />
+    <Content Include="Images\Areas\2_shoulder.png" />
+    <Content Include="Images\Areas\2_sole.png" />
+    <Content Include="Images\Areas\3_head.png" />
+    <Content Include="Images\Areas\3_leg.png" />
+    <Content Include="Images\Areas\3_neck.png" />
+    <Content Include="Images\Areas\3_shoulder.png" />
+    <Content Include="Images\Areas\3_sole.png" />
+    <Content Include="Images\Areas\4_head.png" />
+    <Content Include="Images\Areas\4_leg.png" />
+    <Content Include="Images\Areas\4_neck.png" />
+    <Content Include="Images\Areas\4_shoulder.png" />
+    <Content Include="Images\Areas\4_sole.png" />
+    <Content Include="Images\Areas\5_head.png" />
+    <Content Include="Images\Areas\5_leg.png" />
+    <Content Include="Images\Areas\5_neck.png" />
+    <Content Include="Images\Areas\5_shoulder.png" />
+    <Content Include="Images\Areas\5_sole.png" />
+    <Content Include="Images\Areas\6_head.png" />
+    <Content Include="Images\Areas\6_leg.png" />
+    <Content Include="Images\Areas\6_neck.png" />
+    <Content Include="Images\Areas\6_shoulder.png" />
+    <Content Include="Images\Areas\6_sole.png" />
+    <Content Include="Images\Areas\7_head.png" />
+    <Content Include="Images\Areas\7_leg.png" />
+    <Content Include="Images\Areas\7_neck.png" />
+    <Content Include="Images\Areas\7_shoulder.png" />
+    <Content Include="Images\Areas\7_sole.png" />
+    <Content Include="Images\Areas\head.png" />
+    <Content Include="Images\Areas\shoulder.png" />
+    <Content Include="Images\Products\Blazer\1_browse.png" />
+    <Content Include="Images\Products\Blazer\1_product.png" />
+    <Content Include="Images\Products\Blazer\1_tb.png" />
+    <Content Include="Images\Products\Blazer\1_zoom.png" />
+    <Content Include="Images\Products\Blazer\2_browse.png" />
+    <Content Include="Images\Products\Blazer\2_product.png" />
+    <Content Include="Images\Products\Blazer\2_tb.png" />
+    <Content Include="Images\Products\Blazer\2_zoom.png" />
+    <Content Include="Images\Products\Blazer\3_zoom.png" />
+    <Content Include="Images\Products\Blazer\3_browse.png" />
+    <Content Include="Images\Products\Blazer\3_product.png" />
+    <Content Include="Images\Products\Blazer\3_tb.png" />
+    <Content Include="Images\Products\Blazer\4_zoom.png" />
+    <Content Include="Images\Products\Blazer\4_browse.png" />
+    <Content Include="Images\Products\Blazer\4_product.png" />
+    <Content Include="Images\Products\Blazer\4_tb.png" />
+    <Content Include="Images\Products\Blazer\5_zoom.png" />
+    <Content Include="Images\Products\Blazer\5_browse.png" />
+    <Content Include="Images\Products\Blazer\5_product.png" />
+    <Content Include="Images\Products\Blazer\5_tb.png" />
+    <Content Include="Images\Products\Blazer\6_zoom.png" />
+    <Content Include="Images\Products\Blazer\6_browse.png" />
+    <Content Include="Images\Products\Blazer\6_product.png" />
+    <Content Include="Images\Products\Blazer\6_tb.png" />
+    <Content Include="Images\Products\Blazer\7_zoom.png" />
+    <Content Include="Images\Products\Blazer\7_browse.png" />
+    <Content Include="Images\Products\Blazer\7_product.png" />
+    <Content Include="Images\Products\Blazer\7_tb.png" />
+    <Content Include="Images\Products\Hat\1_browse.png" />
+    <Content Include="Images\Products\Hat\1_product.png" />
+    <Content Include="Images\Products\Hat\1_tb.png" />
+    <Content Include="Images\Products\Hat\1_zoom.png" />
+    <Content Include="Images\Products\Hat\2_browse.png" />
+    <Content Include="Images\Products\Hat\2_product.png" />
+    <Content Include="Images\Products\Hat\2_tb.png" />
+    <Content Include="Images\Products\Hat\2_zoom.png" />
+    <Content Include="Images\Products\Hat\3_browse.png" />
+    <Content Include="Images\Products\Hat\3_product.png" />
+    <Content Include="Images\Products\Hat\3_tb.png" />
+    <Content Include="Images\Products\Hat\3_zoom.png" />
+    <Content Include="Images\Products\Hat\4_browse.png" />
+    <Content Include="Images\Products\Hat\4_product.png" />
+    <Content Include="Images\Products\Hat\4_tb.png" />
+    <Content Include="Images\Products\Hat\4_zoom.png" />
+    <Content Include="Images\Products\Hat\5_browse.png" />
+    <Content Include="Images\Products\Hat\5_product.png" />
+    <Content Include="Images\Products\Hat\5_tb.png" />
+    <Content Include="Images\Products\Hat\5_zoom.png" />
+    <Content Include="Images\Products\Hat\6_browse.png" />
+    <Content Include="Images\Products\Hat\6_product.png" />
+    <Content Include="Images\Products\Hat\6_tb.png" />
+    <Content Include="Images\Products\Hat\6_zoom.png" />
+    <Content Include="Images\Products\Hat\7_browse.png" />
+    <Content Include="Images\Products\Hat\7_product.png" />
+    <Content Include="Images\Products\Hat\7_tb.png" />
+    <Content Include="Images\Products\Hat\7_zoom.png" />
+    <Content Include="Images\Products\Jacket\1_browse.png" />
+    <Content Include="Images\Products\Jacket\1_product.png" />
+    <Content Include="Images\Products\Jacket\1_tb.png" />
+    <Content Include="Images\Products\Jacket\1_zoom.png" />
+    <Content Include="Images\Products\Jacket\2_browse.png" />
+    <Content Include="Images\Products\Jacket\2_product.png" />
+    <Content Include="Images\Products\Jacket\2_tb.png" />
+    <Content Include="Images\Products\Jacket\2_zoom.png" />
+    <Content Include="Images\Products\Jacket\3_browse.png" />
+    <Content Include="Images\Products\Jacket\3_product.png" />
+    <Content Include="Images\Products\Jacket\3_tb.png" />
+    <Content Include="Images\Products\Jacket\3_zoom.png" />
+    <Content Include="Images\Products\Jacket\4_browse.png" />
+    <Content Include="Images\Products\Jacket\4_product.png" />
+    <Content Include="Images\Products\Jacket\4_tb.png" />
+    <Content Include="Images\Products\Jacket\4_zoom.png" />
+    <Content Include="Images\Products\Jacket\5_browse.png" />
+    <Content Include="Images\Products\Jacket\5_product.png" />
+    <Content Include="Images\Products\Jacket\5_tb.png" />
+    <Content Include="Images\Products\Jacket\5_zoom.png" />
+    <Content Include="Images\Products\Jacket\6_browse.png" />
+    <Content Include="Images\Products\Jacket\6_product.png" />
+    <Content Include="Images\Products\Jacket\6_tb.png" />
+    <Content Include="Images\Products\Jacket\6_zoom.png" />
+    <Content Include="Images\Products\Jacket\7_browse.png" />
+    <Content Include="Images\Products\Jacket\7_product.png" />
+    <Content Include="Images\Products\Jacket\7_tb.png" />
+    <Content Include="Images\Products\Jacket\7_zoom.png" />
+    <Content Include="Images\Products\Jeans\1_browse.png" />
+    <Content Include="Images\Products\Jeans\1_product.png" />
+    <Content Include="Images\Products\Jeans\1_tb.png" />
+    <Content Include="Images\Products\Jeans\1_tb_b.png" />
+    <Content Include="Images\Products\Jeans\1_zoom.png" />
+    <Content Include="Images\Products\Jeans\2_browse.png" />
+    <Content Include="Images\Products\Jeans\2_product.png" />
+    <Content Include="Images\Products\Jeans\2_tb.png" />
+    <Content Include="Images\Products\Jeans\2_tb_b.png" />
+    <Content Include="Images\Products\Jeans\2_zoom.png" />
+    <Content Include="Images\Products\Jeans\3_browse.png" />
+    <Content Include="Images\Products\Jeans\3_product.png" />
+    <Content Include="Images\Products\Jeans\3_tb.png" />
+    <Content Include="Images\Products\Jeans\3_tb_b.png" />
+    <Content Include="Images\Products\Jeans\3_zoom.png" />
+    <Content Include="Images\Products\Jeans\4_browse.png" />
+    <Content Include="Images\Products\Jeans\4_product.png" />
+    <Content Include="Images\Products\Jeans\4_tb.png" />
+    <Content Include="Images\Products\Jeans\4_tb_b.png" />
+    <Content Include="Images\Products\Jeans\4_zoom.png" />
+    <Content Include="Images\Products\Jeans\5_browse.png" />
+    <Content Include="Images\Products\Jeans\5_product.png" />
+    <Content Include="Images\Products\Jeans\5_tb.png" />
+    <Content Include="Images\Products\Jeans\5_tb_b.png" />
+    <Content Include="Images\Products\Jeans\5_zoom.png" />
+    <Content Include="Images\Products\Jeans\6_browse.png" />
+    <Content Include="Images\Products\Jeans\6_product.png" />
+    <Content Include="Images\Products\Jeans\6_tb.png" />
+    <Content Include="Images\Products\Jeans\6_tb_b.png" />
+    <Content Include="Images\Products\Jeans\6_zoom.png" />
+    <Content Include="Images\Products\Jeans\7_browse.png" />
+    <Content Include="Images\Products\Jeans\7_product.png" />
+    <Content Include="Images\Products\Jeans\7_tb.png" />
+    <Content Include="Images\Products\Jeans\7_tb_b.png" />
+    <Content Include="Images\Products\Jeans\7_zoom.png" />
+    <Content Include="Images\Products\Loafers\1_browse.png" />
+    <Content Include="Images\Products\Loafers\1_product.png" />
+    <Content Include="Images\Products\Loafers\1_tb.png" />
+    <Content Include="Images\Products\Loafers\1_zoom.png" />
+    <Content Include="Images\Products\Loafers\2_browse.png" />
+    <Content Include="Images\Products\Loafers\2_product.png" />
+    <Content Include="Images\Products\Loafers\2_tb.png" />
+    <Content Include="Images\Products\Loafers\2_zoom.png" />
+    <Content Include="Images\Products\Loafers\3_browse.png" />
+    <Content Include="Images\Products\Loafers\3_product.png" />
+    <Content Include="Images\Products\Loafers\3_tb.png" />
+    <Content Include="Images\Products\Loafers\3_zoom.png" />
+    <Content Include="Images\Products\Loafers\4_browse.png" />
+    <Content Include="Images\Products\Loafers\4_product.png" />
+    <Content Include="Images\Products\Loafers\4_tb.png" />
+    <Content Include="Images\Products\Loafers\4_zoom.png" />
+    <Content Include="Images\Products\Loafers\5_browse.png" />
+    <Content Include="Images\Products\Loafers\5_product.png" />
+    <Content Include="Images\Products\Loafers\5_tb.png" />
+    <Content Include="Images\Products\Loafers\5_zoom.png" />
+    <Content Include="Images\Products\Loafers\6_browse.png" />
+    <Content Include="Images\Products\Loafers\6_product.png" />
+    <Content Include="Images\Products\Loafers\6_tb.png" />
+    <Content Include="Images\Products\Loafers\6_zoom.png" />
+    <Content Include="Images\Products\Loafers\7_browse.png" />
+    <Content Include="Images\Products\Loafers\7_product.png" />
+    <Content Include="Images\Products\Loafers\7_tb.png" />
+    <Content Include="Images\Products\Loafers\7_zoom.png" />
+    <Content Include="Images\Products\Pants\1_browse.png" />
+    <Content Include="Images\Products\Pants\1_product.png" />
+    <Content Include="Images\Products\Pants\1_tb.png" />
+    <Content Include="Images\Products\Pants\1_tb_b.png" />
+    <Content Include="Images\Products\Pants\1_zoom.png" />
+    <Content Include="Images\Products\Pants\2_browse.png" />
+    <Content Include="Images\Products\Pants\2_product.png" />
+    <Content Include="Images\Products\Pants\2_tb.png" />
+    <Content Include="Images\Products\Pants\2_tb_b.png" />
+    <Content Include="Images\Products\Pants\2_zoom.png" />
+    <Content Include="Images\Products\Pants\3_browse.png" />
+    <Content Include="Images\Products\Pants\3_product.png" />
+    <Content Include="Images\Products\Pants\3_tb.png" />
+    <Content Include="Images\Products\Pants\3_tb_b.png" />
+    <Content Include="Images\Products\Pants\3_zoom.png" />
+    <Content Include="Images\Products\Pants\4_browse.png" />
+    <Content Include="Images\Products\Pants\4_product.png" />
+    <Content Include="Images\Products\Pants\4_tb.png" />
+    <Content Include="Images\Products\Pants\4_tb_b.png" />
+    <Content Include="Images\Products\Pants\4_zoom.png" />
+    <Content Include="Images\Products\Pants\5_browse.png" />
+    <Content Include="Images\Products\Pants\5_product.png" />
+    <Content Include="Images\Products\Pants\5_tb.png" />
+    <Content Include="Images\Products\Pants\5_tb_b.png" />
+    <Content Include="Images\Products\Pants\5_zoom.png" />
+    <Content Include="Images\Products\Pants\6_browse.png" />
+    <Content Include="Images\Products\Pants\6_product.png" />
+    <Content Include="Images\Products\Pants\6_tb.png" />
+    <Content Include="Images\Products\Pants\6_tb_b.png" />
+    <Content Include="Images\Products\Pants\6_zoom.png" />
+    <Content Include="Images\Products\Pants\7_browse.png" />
+    <Content Include="Images\Products\Pants\7_product.png" />
+    <Content Include="Images\Products\Pants\7_tb.png" />
+    <Content Include="Images\Products\Pants\7_tb_b.png" />
+    <Content Include="Images\Products\Pants\7_zoom.png" />
+    <Content Include="Images\Products\Scarf\1_browse.png" />
+    <Content Include="Images\Products\Scarf\1_product.png" />
+    <Content Include="Images\Products\Scarf\1_tb.png" />
+    <Content Include="Images\Products\Scarf\1_zoom.png" />
+    <Content Include="Images\Products\Scarf\2_browse.png" />
+    <Content Include="Images\Products\Scarf\2_product.png" />
+    <Content Include="Images\Products\Scarf\2_tb.png" />
+    <Content Include="Images\Products\Scarf\2_zoom.png" />
+    <Content Include="Images\Products\Scarf\3_browse.png" />
+    <Content Include="Images\Products\Scarf\3_product.png" />
+    <Content Include="Images\Products\Scarf\3_tb.png" />
+    <Content Include="Images\Products\Scarf\3_zoom.png" />
+    <Content Include="Images\Products\Scarf\4_browse.png" />
+    <Content Include="Images\Products\Scarf\4_product.png" />
+    <Content Include="Images\Products\Scarf\4_tb.png" />
+    <Content Include="Images\Products\Scarf\4_zoom.png" />
+    <Content Include="Images\Products\Scarf\5_browse.png" />
+    <Content Include="Images\Products\Scarf\5_product.png" />
+    <Content Include="Images\Products\Scarf\5_tb.png" />
+    <Content Include="Images\Products\Scarf\5_zoom.png" />
+    <Content Include="Images\Products\Scarf\6_browse.png" />
+    <Content Include="Images\Products\Scarf\6_product.png" />
+    <Content Include="Images\Products\Scarf\6_tb.png" />
+    <Content Include="Images\Products\Scarf\6_zoom.png" />
+    <Content Include="Images\Products\Scarf\7_browse.png" />
+    <Content Include="Images\Products\Scarf\7_product.png" />
+    <Content Include="Images\Products\Scarf\7_tb.png" />
+    <Content Include="Images\Products\Scarf\7_zoom.png" />
+    <Content Include="Images\Products\Shirt\1_browse.png" />
+    <Content Include="Images\Products\Shirt\1_product.png" />
+    <Content Include="Images\Products\Shirt\1_tb.png" />
+    <Content Include="Images\Products\Shirt\1_zoom.png" />
+    <Content Include="Images\Products\Shirt\2_browse.png" />
+    <Content Include="Images\Products\Shirt\2_product.png" />
+    <Content Include="Images\Products\Shirt\2_tb.png" />
+    <Content Include="Images\Products\Shirt\2_zoom.png" />
+    <Content Include="Images\Products\Shirt\3_browse.png" />
+    <Content Include="Images\Products\Shirt\3_product.png" />
+    <Content Include="Images\Products\Shirt\3_tb.png" />
+    <Content Include="Images\Products\Shirt\3_zoom.png" />
+    <Content Include="Images\Products\Shirt\4_browse.png" />
+    <Content Include="Images\Products\Shirt\4_product.png" />
+    <Content Include="Images\Products\Shirt\4_tb.png" />
+    <Content Include="Images\Products\Shirt\4_zoom.png" />
+    <Content Include="Images\Products\Shirt\5_browse.png" />
+    <Content Include="Images\Products\Shirt\5_product.png" />
+    <Content Include="Images\Products\Shirt\5_tb.png" />
+    <Content Include="Images\Products\Shirt\5_zoom.png" />
+    <Content Include="Images\Products\Shirt\6_browse.png" />
+    <Content Include="Images\Products\Shirt\6_product.png" />
+    <Content Include="Images\Products\Shirt\6_tb.png" />
+    <Content Include="Images\Products\Shirt\6_zoom.png" />
+    <Content Include="Images\Products\Shirt\7_browse.png" />
+    <Content Include="Images\Products\Shirt\7_product.png" />
+    <Content Include="Images\Products\Shirt\7_tb.png" />
+    <Content Include="Images\Products\Shirt\7_zoom.png" />
+    <Content Include="Images\Products\Shoes\1_browse.png" />
+    <Content Include="Images\Products\Shoes\1_product.png" />
+    <Content Include="Images\Products\Shoes\1_tb.png" />
+    <Content Include="Images\Products\Shoes\1_zoom.png" />
+    <Content Include="Images\Products\Shoes\2_browse.png" />
+    <Content Include="Images\Products\Shoes\2_product.png" />
+    <Content Include="Images\Products\Shoes\2_tb.png" />
+    <Content Include="Images\Products\Shoes\2_zoom.png" />
+    <Content Include="Images\Products\Shoes\3_browse.png" />
+    <Content Include="Images\Products\Shoes\3_product.png" />
+    <Content Include="Images\Products\Shoes\3_tb.png" />
+    <Content Include="Images\Products\Shoes\3_zoom.png" />
+    <Content Include="Images\Products\Shoes\4_browse.png" />
+    <Content Include="Images\Products\Shoes\4_product.png" />
+    <Content Include="Images\Products\Shoes\4_tb.png" />
+    <Content Include="Images\Products\Shoes\4_zoom.png" />
+    <Content Include="Images\Products\Shoes\5_browse.png" />
+    <Content Include="Images\Products\Shoes\5_product.png" />
+    <Content Include="Images\Products\Shoes\5_tb.png" />
+    <Content Include="Images\Products\Shoes\5_zoom.png" />
+    <Content Include="Images\Products\Shoes\6_browse.png" />
+    <Content Include="Images\Products\Shoes\6_product.png" />
+    <Content Include="Images\Products\Shoes\6_tb.png" />
+    <Content Include="Images\Products\Shoes\6_zoom.png" />
+    <Content Include="Images\Products\Shoes\7_browse.png" />
+    <Content Include="Images\Products\Shoes\7_product.png" />
+    <Content Include="Images\Products\Shoes\7_tb.png" />
+    <Content Include="Images\Products\Shoes\7_zoom.png" />
+    <Content Include="Images\Products\Sneakers\1_browse.png" />
+    <Content Include="Images\Products\Sneakers\1_product.png" />
+    <Content Include="Images\Products\Sneakers\1_tb.png" />
+    <Content Include="Images\Products\Sneakers\1_zoom.png" />
+    <Content Include="Images\Products\Sneakers\2_browse.png" />
+    <Content Include="Images\Products\Sneakers\2_product.png" />
+    <Content Include="Images\Products\Sneakers\2_tb.png" />
+    <Content Include="Images\Products\Sneakers\2_zoom.png" />
+    <Content Include="Images\Products\Sneakers\3_browse.png" />
+    <Content Include="Images\Products\Sneakers\3_product.png" />
+    <Content Include="Images\Products\Sneakers\3_tb.png" />
+    <Content Include="Images\Products\Sneakers\3_zoom.png" />
+    <Content Include="Images\Products\Sneakers\4_browse.png" />
+    <Content Include="Images\Products\Sneakers\4_product.png" />
+    <Content Include="Images\Products\Sneakers\4_tb.png" />
+    <Content Include="Images\Products\Sneakers\4_zoom.png" />
+    <Content Include="Images\Products\Sneakers\5_browse.png" />
+    <Content Include="Images\Products\Sneakers\5_product.png" />
+    <Content Include="Images\Products\Sneakers\5_tb.png" />
+    <Content Include="Images\Products\Sneakers\5_zoom.png" />
+    <Content Include="Images\Products\Sneakers\6_browse.png" />
+    <Content Include="Images\Products\Sneakers\6_product.png" />
+    <Content Include="Images\Products\Sneakers\6_tb.png" />
+    <Content Include="Images\Products\Sneakers\6_zoom.png" />
+    <Content Include="Images\Products\Sneakers\7_browse.png" />
+    <Content Include="Images\Products\Sneakers\7_product.png" />
+    <Content Include="Images\Products\Sneakers\7_tb.png" />
+    <Content Include="Images\Products\Sneakers\7_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\1_browse.png" />
+    <Content Include="Images\Products\Sunglasses\1_product.png" />
+    <Content Include="Images\Products\Sunglasses\1_tb.png" />
+    <Content Include="Images\Products\Sunglasses\1_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\2_browse.png" />
+    <Content Include="Images\Products\Sunglasses\2_product.png" />
+    <Content Include="Images\Products\Sunglasses\2_tb.png" />
+    <Content Include="Images\Products\Sunglasses\2_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\3_browse.png" />
+    <Content Include="Images\Products\Sunglasses\3_product.png" />
+    <Content Include="Images\Products\Sunglasses\3_tb.png" />
+    <Content Include="Images\Products\Sunglasses\3_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\4_browse.png" />
+    <Content Include="Images\Products\Sunglasses\4_product.png" />
+    <Content Include="Images\Products\Sunglasses\4_tb.png" />
+    <Content Include="Images\Products\Sunglasses\4_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\5_browse.png" />
+    <Content Include="Images\Products\Sunglasses\5_product.png" />
+    <Content Include="Images\Products\Sunglasses\5_tb.png" />
+    <Content Include="Images\Products\Sunglasses\5_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\6_browse.png" />
+    <Content Include="Images\Products\Sunglasses\6_product.png" />
+    <Content Include="Images\Products\Sunglasses\6_tb.png" />
+    <Content Include="Images\Products\Sunglasses\6_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\7_browse.png" />
+    <Content Include="Images\Products\Sunglasses\7_product.png" />
+    <Content Include="Images\Products\Sunglasses\7_tb.png" />
+    <Content Include="Images\Products\Sunglasses\7_zoom.png" />
+    <Content Include="Images\Products\Sunglasses\8_browse.png" />
+    <Content Include="Images\Products\Sunglasses\8_product.png" />
+    <Content Include="Images\Products\Sunglasses\8_tb.png" />
+    <Content Include="Images\Products\Sunglasses\8_zoom.png" />
+    <Content Include="Images\Products\Sweater\1_browse.png" />
+    <Content Include="Images\Products\Sweater\1_product.png" />
+    <Content Include="Images\Products\Sweater\1_tb.png" />
+    <Content Include="Images\Products\Sweater\1_zoom.png" />
+    <Content Include="Images\Products\Sweater\2_browse.png" />
+    <Content Include="Images\Products\Sweater\2_product.png" />
+    <Content Include="Images\Products\Sweater\2_tb.png" />
+    <Content Include="Images\Products\Sweater\2_zoom.png" />
+    <Content Include="Images\Products\Sweater\3_browse.png" />
+    <Content Include="Images\Products\Sweater\3_product.png" />
+    <Content Include="Images\Products\Sweater\3_tb.png" />
+    <Content Include="Images\Products\Sweater\3_zoom.png" />
+    <Content Include="Images\Products\Sweater\4_browse.png" />
+    <Content Include="Images\Products\Sweater\4_product.png" />
+    <Content Include="Images\Products\Sweater\4_tb.png" />
+    <Content Include="Images\Products\Sweater\4_zoom.png" />
+    <Content Include="Images\Products\Sweater\5_browse.png" />
+    <Content Include="Images\Products\Sweater\5_product.png" />
+    <Content Include="Images\Products\Sweater\5_tb.png" />
+    <Content Include="Images\Products\Sweater\5_zoom.png" />
+    <Content Include="Images\Products\Sweater\6_browse.png" />
+    <Content Include="Images\Products\Sweater\6_product.png" />
+    <Content Include="Images\Products\Sweater\6_tb.png" />
+    <Content Include="Images\Products\Sweater\6_zoom.png" />
+    <Content Include="Images\Products\Sweater\7_browse.png" />
+    <Content Include="Images\Products\Sweater\7_product.png" />
+    <Content Include="Images\Products\Sweater\7_tb.png" />
+    <Content Include="Images\Products\Sweater\7_zoom.png" />
+    <Content Include="Images\Products\Tie\1_browse.png" />
+    <Content Include="Images\Products\Tie\1_product.png" />
+    <Content Include="Images\Products\Tie\1_tb.png" />
+    <Content Include="Images\Products\Tie\1_zoom.png" />
+    <Content Include="Images\Products\Tie\2_browse.png" />
+    <Content Include="Images\Products\Tie\2_product.png" />
+    <Content Include="Images\Products\Tie\2_tb.png" />
+    <Content Include="Images\Products\Tie\2_zoom.png" />
+    <Content Include="Images\Products\Tie\3_browse.png" />
+    <Content Include="Images\Products\Tie\3_product.png" />
+    <Content Include="Images\Products\Tie\3_tb.png" />
+    <Content Include="Images\Products\Tie\3_zoom.png" />
+    <Content Include="Images\Products\Tie\4_browse.png" />
+    <Content Include="Images\Products\Tie\4_product.png" />
+    <Content Include="Images\Products\Tie\4_tb.png" />
+    <Content Include="Images\Products\Tie\4_zoom.png" />
+    <Content Include="Images\Products\Tie\5_browse.png" />
+    <Content Include="Images\Products\Tie\5_product.png" />
+    <Content Include="Images\Products\Tie\5_tb.png" />
+    <Content Include="Images\Products\Tie\5_zoom.png" />
+    <Content Include="Images\Products\Tie\6_browse.png" />
+    <Content Include="Images\Products\Tie\6_product.png" />
+    <Content Include="Images\Products\Tie\6_tb.png" />
+    <Content Include="Images\Products\Tie\6_zoom.png" />
+    <Content Include="Images\Products\Tie\7_browse.png" />
+    <Content Include="Images\Products\Tie\7_product.png" />
+    <Content Include="Images\Products\Tie\7_tb.png" />
+    <Content Include="Images\Products\Tie\7_zoom.png" />
+    <Content Include="Images\Products\TShirt\1_browse.png" />
+    <Content Include="Images\Products\TShirt\1_product.png" />
+    <Content Include="Images\Products\TShirt\1_tb.png" />
+    <Content Include="Images\Products\TShirt\1_zoom.png" />
+    <Content Include="Images\Products\TShirt\2_browse.png" />
+    <Content Include="Images\Products\TShirt\2_product.png" />
+    <Content Include="Images\Products\TShirt\2_tb.png" />
+    <Content Include="Images\Products\TShirt\2_zoom.png" />
+    <Content Include="Images\Products\TShirt\3_browse.png" />
+    <Content Include="Images\Products\TShirt\3_product.png" />
+    <Content Include="Images\Products\TShirt\3_tb.png" />
+    <Content Include="Images\Products\TShirt\3_zoom.png" />
+    <Content Include="Images\Products\TShirt\4_browse.png" />
+    <Content Include="Images\Products\TShirt\4_product.png" />
+    <Content Include="Images\Products\TShirt\4_tb.png" />
+    <Content Include="Images\Products\TShirt\4_zoom.png" />
+    <Content Include="Images\Products\TShirt\5_browse.png" />
+    <Content Include="Images\Products\TShirt\5_product.png" />
+    <Content Include="Images\Products\TShirt\5_tb.png" />
+    <Content Include="Images\Products\TShirt\5_zoom.png" />
+    <Content Include="Images\Products\TShirt\6_browse.png" />
+    <Content Include="Images\Products\TShirt\6_product.png" />
+    <Content Include="Images\Products\TShirt\6_tb.png" />
+    <Content Include="Images\Products\TShirt\6_zoom.png" />
+    <Content Include="Images\Products\TShirt\7_browse.png" />
+    <Content Include="Images\Products\TShirt\7_product.png" />
+    <Content Include="Images\Products\TShirt\7_tb.png" />
+    <Content Include="Images\Products\TShirt\7_zoom.png" />
+    <Content Include="SampleData\Catalog.xlsx" />
+    <Content Include="SampleData\products.json" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2139/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

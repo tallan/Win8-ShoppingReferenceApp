@@ -1,0 +1,414 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+
+.productdetailpage {
+}
+
+.productdetailpage section {
+    display: -ms-grid;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-grid-columns: 460px 200px auto;
+    -ms-grid-rows: 100%;
+}
+/*Combined with column for the styling*/
+.productdetailpage .itemZoom {
+    background: #eee;
+    -ms-grid-column: 1;
+    width: 360px;
+    margin-left: 95px;
+}
+
+
+/*Over rides the default for a first "column"*/
+.productdetailpage :first-child.column {
+}
+
+.productdetailpage .itemThumbs {
+    -ms-grid-column: 2;
+    width: 185px;
+}
+
+.productdetailpage .thumbsList {
+    list-style: none;
+    padding: 0;
+}
+
+.productdetailpage .thumbsList li {
+    float: left;
+    margin-bottom: 5px;
+}
+
+.productdetailpage .thumbsList li img {
+    height: 175px;
+    background-color: #eee;
+}
+
+.productdetailpage .thumbsList li:first-of-type img {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.productdetailpage .thumbsList li:nth-of-type(2) img {
+    background-color: rgba(130, 87, 76, .7);
+}
+
+.productdetailpage .thumbsList li:nth-of-type(3) img {
+    background-color: rgba(51, 102, 153,.5);
+    -ms-transform: rotateY(180deg);
+}
+
+.productdetailpage .thumbsList li:nth-of-type(4) img {
+    -ms-transform: rotateY(180deg);
+    background-color: rgba(102, 132, 122, .7);
+}
+
+.productdetailpage hgroup {
+    margin: 0 auto;
+    -ms-transform: skew(-2deg);
+    font-size: 18pt;
+}
+
+.productdetailpage .itemInfo {
+    background-color: #eee;
+    display: -ms-grid;
+    -ms-grid-columns: 460px auto;
+    -ms-grid-column: 3;
+    margin: 30px 20px;
+    height: 708px;
+    position: relative;
+}
+
+.productdetailpage .itemDesc,
+/* .itemOptions, NOTE (BD): this caused the 2nd and third options to be invisible until hovered. */
+.productdetailpage .itemLinks,
+.productdetailpage .itemReview {
+    -ms-transform: skew(-2deg);
+    line-height: 14pt;
+    font-size: 12pt;
+    letter-spacing: 1px;
+}
+
+.productdetailpage .itemDetails {
+    -ms-grid-column: 1;
+    padding: 20px 40px;
+}
+
+.productdetailpage .itemDesc {
+    position: relative;
+    line-height: 14pt;
+    font-size: 12pt;
+}
+
+.productdetailpage .itemDesc h3 {
+    font-size: 34pt;
+    font-weight: 100;
+}
+
+.productdetailpage .itemDesc ul {
+    padding-left: 20px;
+}
+
+.productdetailpage .itemDesc button {
+    background: #5f574c;
+    border: none;
+    color: #fff;
+    position: absolute;
+    right: 60px;
+    top: 10px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.productdetailpage .itemDesc #itemRating {
+    margin: 10px 0;
+}
+
+.productdetailpage .itemDesc .ratingStars {
+    display: inline-block;
+}
+
+.win-star.win-average.win-empty {
+    color: rgba(0, 0, 0, 0.5);
+}
+/* NOTE (WFM): Empty stars, average rating. */
+.win-star.win-average.win-full {
+    color: #333;
+}
+/* NOTE (WFM): Full stars, average rating. */
+.win-star.win-tentative.win-empty {
+    color: rgba(0, 51, 102, 0.25);
+}
+/* NOTE (WFM): Empty stars, tentative rating. */
+.win-star.win-tentative.win-full {
+    color: #036 !important;
+}
+/* NOTE (WFM): Full stars, tentative rating. */
+.win-star.win-user.win-empty {
+    color: rgba(0, 0, 0, 0.25);
+}
+/* NOTE (WFM): Empty stars, user rating. */
+.win-star.win-user.win-full {
+    color: #369 !important;
+}
+/* NOTE (WFM): Full stars, user rating. */
+
+.productdetailpage .itemDesc #ratingCount {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16pt;
+}
+
+.productdetailpage .itemOptions {
+    border: 2px dotted #333;
+    border-width: 2px 0;
+    margin: 40px auto;
+}
+
+.productdetailpage .itemOptions select,
+.productdetailpage .itemOptions input {
+    -ms-transform: skew(-2deg);
+}
+
+.productdetailpage .itemOptions label {
+    display: inline-block;
+    width: 80px;
+    font-size: 12pt;
+}
+
+/* .itemOptions option::selection, */
+.productdetailpage .itemOptions option:checked, .productdetailpage .itemOptions:focus::-ms-value {
+    background-color: #369;
+}
+
+/* .itemOptions option::selection:hover, */
+.productdetailpage .itemOptions option:checked:hover, .productdetailpage .itemOptions:focus option:checked:hover {
+    background-color: #036 !important;
+}
+
+.productdetailpage .itemOptions .quantity {
+    width: 40px;
+}
+
+.productdetailpage .itemLinks {
+    /* Placeholder */
+}
+
+.productdetailpage .itemLinks a {
+    color: #333;
+    font-weight: bold;
+}
+
+.productdetailpage .itemLinks a:hover {
+    color: #369;
+}
+/* styling for the reviews section*/
+.productdetailpage .itemReviews {
+    -ms-grid-column: 2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 40px 40px 20px 0px;
+    height: 100%;
+}
+
+.productdetailpage .itemReviews h3 {
+    border-bottom: 2px dotted #333;
+    margin-bottom: 20px;
+    -ms-transform: skew(-2deg);
+    font-size: 18pt;
+}
+
+.productdetailpage .reviewsList {
+    height: 100%;
+    display: -ms-grid;
+}
+
+.productdetailpage .reviewsList > div {
+    margin-bottom: 40px;
+    min-width: 350px;
+}
+
+.productdetailpage .reviewsList > div p {
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.productdetailpage .reviewsList > div .reviewText {
+    color: #000;
+}
+/* Styling for the select boxes*/
+
+.itemOptions select {
+    background-color: rgba(0,0,0,0) !important;
+    color: rgb(0, 0, 0);
+    border-color: rgba(0,0,0,0) !important;
+}
+
+.itemOptions select:focus {
+    border-color: #369 !important;
+}
+
+.itemOptions *:focus::-ms-clear {
+    color: #369;
+}
+
+.itemOptions input {
+    border-color: rgba(0,0,0,0) !important;
+}
+/********************************************************************/
+@media (-ms-view-state: snapped) {
+    .productdetailpage {
+        height: 768px;
+    }
+
+    .productdetailpage section[role=main] {
+        display: block;
+        max-width: 300px;
+        overflow-y: inherit;
+        overflow-x: inherit;
+        margin-top: 0;
+    }
+
+
+    .productdetailpage hgroup {
+        margin-top: 0;
+    }
+
+    .productdetailpage header h1 {
+        font-size: 20pt;
+        font-weight: 600;
+        -ms-transform: none;
+        overflow: visible;
+    }
+
+    .productdetailpage .itemZoom {
+        display: none;
+    }
+
+    .productdetailpage .itemThumbs {
+        position: relative;
+        top: 25px;
+        left: 50px;
+        z-index: 1000;
+    }
+
+    .productdetailpage .itemThumbs li:first-of-type {
+        padding: 0;
+        margin: 10px 0 0 0;
+        height: 150px;
+        width: 150px;
+        position: relative;
+        display: block;
+    }
+
+    .productdetailpage .itemThumbs li:nth-of-type(2), .productdetailpage .itemThumbs li:nth-of-type(3), .productdetailpage .itemThumbs li:last-of-type {
+        display: none;
+    }
+
+    .productdetailpage .itemInfo {
+        background-color: transparent;
+        display: block;
+        -ms-transform: none;
+        z-index: -1;
+        margin: 0;
+        position: absolute;
+        left: 0;
+    }
+
+    .productdetailpage .itemInfo .itemDetails {
+        position: relative;
+        top: 175px;
+        margin: 0;
+        padding: 0 0;
+    }
+
+    .productdetailpage .itemInfo h3 {
+        position: relative;
+        margin: -175px 0 0 95px;
+        padding: 0;
+        font-size: 18pt;
+        -ms-transform: none;
+    }
+
+    .productdetailpage .itemInfo .addToCart {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 80px;
+        top: 190px;
+    }
+
+    .productdetailpage .itemInfo #itemRating {
+        position: relative;
+        top: 200px;
+        margin: 0 0 0 40px;
+        padding: 0;
+    }
+
+    .productdetailpage .itemDesc #ratingCount {
+        font-size: 10pt;
+        display: block;
+    }
+
+    .productdetailpage .itemInfo .itemDesc {
+        -ms-transform: none;
+    }
+
+    .productdetailpage .itemInfo .itemDesc p, .productdetailpage .itemInfo .itemDesc ul {
+        margin: 0;
+        top: 400px;
+        position: relative;
+        display: block;
+        color: #333;
+    }
+
+    .productdetailpage .itemInfo .itemOptions {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+        top: 110px;
+    }
+
+    .productdetailpage .itemInfo .itemOptions p {
+        color: #333;
+        margin-left: 0;
+    }
+
+    .productdetailpage .itemInfo .itemOptions p label {
+        font-size: 12pt;
+    }
+
+    .productdetailpage .itemOptions select,
+    .productdetailpage .itemOptions input {
+        -ms-transform: none;
+    }
+
+    .productdetailpage .itemReviews {
+        position: relative;
+        top: 420px;
+        height: 100%;
+        margin: 0;
+        -ms-transform: none;
+    }
+
+    .productdetailpage .itemReviews .itemReview {
+        -ms-transform: none;
+    }
+
+    .productdetailpage .itemReviews h3 {
+        margin: 0;
+    }
+}

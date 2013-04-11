@@ -1,0 +1,81 @@
+﻿<!--*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+*************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping.Client</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+    <script src="/Scripts/underscore.js"></script>
+
+    <!-- Shopping.Client references -->
+    <script src="/js/extendedSplash.js"></script>
+    <script src="/js/noInternet.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/offline_services.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/binding.js"></script>
+    <script src="/js/tileUpdater.js"></script>
+    <script src="/js/sharingProvider.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div data-win-control="WinJS.UI.ViewBox">
+        <div class="pagecontainer">
+            <div id="extendedSplashScreen" class="extendedSplashScreen hidden">
+                <div class="bg" style="background-image: url('/css/images/loading_filled.png');">
+                    <header aria-label="Header content" role="banner">
+                        <h1 class="titlearea pagetitle">Head to Toe</h1>
+                    </header>
+                    <section aria-label="Main content" role="main">
+                        <p>Loading&hellip;</p>
+                        <progress id="extendedSplashProgress" class="win-large win-ring"></progress>
+                    </section>
+                </div>
+            </div>
+            <div id="noInternet" class="noInternet hidden">
+                <div class="bg" style="background-image: url('/css/images/img_noInternet.png');">
+                    <header aria-label="Header content" role="banner">
+                        <h1 class="titlearea pagetitle">Head to Toe</h1>
+                    </header>
+                    <section aria-label="Main content" role="main">
+                        <p>Network Connection Unavailable</p>
+                        <button id="reload">Retry</button>
+                        <div class="demoOfflineData">
+                            In the Shopping Reference app this can occur if you are unable to connect to the local Shopping.WebApi component of the application. <br>
+                            To use demo data, open the <a href="#" id="settingsLink">Settings</a> charm, switch to the Demo services, then click Retry.
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+            
+            <div id="topAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top', disabled : 'true'}">
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

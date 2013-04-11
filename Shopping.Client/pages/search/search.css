@@ -1,0 +1,218 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: filled) {
+    .search .win-listview .win-item {
+        overflow: visible;
+    }
+
+    .search .resultslist {
+        padding-left: 100px;
+        height: 700px !important;
+    }
+
+    .search header h2 {
+        display: inline;
+        font-style: normal;
+        font-size: 40pt;
+        color: #b0b0b0;
+    }
+
+    .search header h2 .searchTerm {
+        color: #808080;
+        font-weight: 500;
+    }
+
+    .search header h1 {
+        display: none;
+    }
+
+    .search header hgroup {
+        top: 200px;
+        height: auto;
+    }
+
+    .search .itemColumn {
+        height: 700px;
+        position: relative;
+        width: 305px;
+        margin-left: 30px;
+    }
+
+    .search .itemColumn hgroup {
+        width: auto;
+        padding-top: 60px;
+        text-align: center;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search .itemColumn hgroup h2, .search .itemColumn hgroup h3 {
+        border-bottom: 2px dotted #808080;
+        color: #333;
+        display: inline-block;
+        font-size: 14pt;
+        font-weight: 600;
+        line-height: 12pt;
+        padding: 5px;
+    }
+
+    .search .itemImage img {
+        height: 600px;
+        margin-left: 20px;
+    }
+
+    .search .itemImage .mainImage {
+        display: block;
+    }
+
+    .search .itemImage .thumbnailImage {
+        display: none;
+    }
+
+    .search section[role=main] .filterarea .filterbar {
+        list-style-type: none;
+    }
+
+    .search section[role=main] .filterarea .filterbar li {
+        opacity: 0.6;
+    }
+
+    .search section[role=main] .filterarea .filterbar li.highlight,
+    .search section[role=main] .filterarea .filterbar li:hover {
+        opacity: 1.00;
+    }
+
+    /* Hide the <select> filter list. It will be shown in snapped mode only. */
+    .search section[role=main] .filterarea .filterselect {
+        display: none;
+    }
+
+    .search {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .search {
+         display: block;
+        position: static;
+        width: 100%;
+        margin-left: 20px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 768px;
+    }
+        .pagecontainer {
+        height: 768px;
+        width: 320px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    /*.search .win-surface, .search .win-container, .search .win-surface{
+        width: 320px !important;
+        height: 110px !important;
+    }*/
+    .search header h1 {
+        display: none; 
+    }
+    .search header h2 {
+        font-size: 20pt;
+        font-weight: 600;
+        -ms-transform: none;
+        display: block;
+        margin-top: 30px;
+    }
+    .search section {
+        position: relative !important;
+        top: 30px;
+        -ms-transform: none;
+        width: 280px;
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+    .search .itemColumn {
+        -ms-grid-columns: 100px 150px;
+        -ms-grid-rows: 100px;
+        display: -ms-grid;
+        max-height: 110px;
+        height: 110px !important;
+        margin-left: 0px;
+        position: static;
+        padding: 5px 0 5px 10px;
+        background: #d5cdc3;
+        overflow: hidden;
+        float: left;
+        width: 280px;  
+    }
+
+    .search .itemColumn img {
+        -ms-grid-column: 1;
+        height: 95px;
+        width: 90px;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        padding: 0;
+        -ms-transform: skew(2deg);
+        background: #eee;
+    }
+
+    .search .itemImage .mainImage {
+        display: none;
+    }
+
+    .search .itemImage .thumbnailImage {
+        display: block;
+    }
+
+    .search .itemColumn .itemImage {
+        padding-top: 5px;
+    }
+
+    .search .itemColumn hgroup {
+        max-height: 40px;
+        width: 90%;
+        -ms-grid-column: 2;
+        position: relative;
+        left: 0;
+        padding: 0;
+        text-align: left;
+        top: 0;
+        background-color: transparent;
+        -ms-grid-row: 1;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+    
+    .search .resultslist {
+        padding-left: 0;
+        width: 280px;
+        height: 600px;
+    }
+
+    /* Hide the <select> filter list. It will be shown in snapped mode only. */
+    .search section[role=main] .filterarea .filterselect {
+        display: none;
+    }
+
+    #searchAppbar button{
+        left: 30px;
+        position: relative;
+    }
+    
+    #searchAppbar{
+      height: 150px;
+    }
+}

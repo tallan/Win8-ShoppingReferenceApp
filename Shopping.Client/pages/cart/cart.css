@@ -1,0 +1,430 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+
+.cartpage .carthide {
+    display: none;
+}
+
+.orderConfirmation .carthide {
+    display: block;
+}
+
+.cartpage .cartshow {
+    display: block;
+}
+
+.orderConfirmation .cartshow {
+    display: none;
+}
+
+.cartpage section[role=main] {
+    padding-left: 90px;
+    padding-top: 60px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-grid-columns: 250px auto;
+    -ms-grid-rows: auto auto;
+    display: -ms-grid;
+    padding-right: 160px;
+    color: #333;
+    height: 709px;
+    width: 1116px;
+}
+
+.orderConfirmation .cartpage section[role=main] {
+    -ms-grid-columns: 400px 1fr;
+}
+
+.cartpage .cartLoading {
+    width: 100%;
+    color: #333;
+}
+
+.cartpage .cart {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    /*display: -ms-grid;
+    -ms-grid-rows: 70px 100px 175px 170px;
+    -ms-grid-columns: 1fr 1fr;*/
+    background-color: #eee;
+    -ms-transform: skew(2deg);
+    width: 200px;
+    padding: 0 20px 20px;
+    transform-origin: center top;
+    margin-top: 20px;
+}
+
+.orderConfirmation .cartpage .cart {
+    width: 325px;
+    padding: 20px 30px;
+}
+
+.orderConfirmation .cart .billingAddress, .orderConfirmation .cart .shippingAddress {
+    float: left;
+    margin-top: 20px;
+    -ms-transform: skew(-2deg);
+}
+
+.orderConfirmation .cart .shippingAddress {
+    margin-left: 20px;
+}
+
+.cartpage h3 {
+    text-align: left;
+    font-weight: 100;
+    font-size: 24pt;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    margin-left: 30px;
+    color: #808080;
+}
+
+/*.
+    .cartpage .cart .checkout
+    {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+    }*/
+
+.cartpage .cart table {
+    -ms-transform: skew(-2deg);
+}
+
+.cartpage .cart .costs table {
+    border-bottom: 2px dotted #808080;
+    width: 200px;
+    padding: 10px;
+    text-align: right;
+    font-size: 12pt;
+}
+
+.cartpage .total {
+    margin-left: 10px;
+    font-size: 14pt;
+    font-weight: 300;
+    -ms-transform: skew(-2deg);
+}
+
+.cartpage .total .totalPrice {
+    float: right;
+    margin-right: 15px;
+}
+
+.cartpage .cart button {
+    text-transform: capitalize;
+    margin: 30px 10px;
+    width: 180px;
+    display: block;
+    -ms-transform: skew(-2deg);
+}
+
+.orderConfirmation .cartpage .cart button {
+    text-transform: capitalize;
+    margin: 30px 50px;
+    width: 180px;
+    display: block;
+    -ms-transform: skew(-2deg);
+}
+
+.cartpage .cart .checkout {
+    margin-top: 200px;
+}
+
+.cartpage .cart button.submitOrder {
+    display: none;
+}
+
+.orderConfirmation .cartpage .cart button.submitOrder {
+    display: block;
+}
+
+.orderConfirmation .cartpage .cart .checkout {
+    display: none;
+}
+
+.cartpage .cart .continue {
+    background-color: #bfbfbf;
+    color: #333;
+    border: 1px solid #333;
+    height: auto;
+    padding: 10px 10px;
+    margin-left: 8px;
+}
+
+.cartpage .cart .continue:hover {
+    background-color: #aaa;
+}
+/*.cartpage .cart .billingAddress
+    {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+    }
+
+    .cartpage .cart .shippingAddress
+    {
+        -ms-grid-column: 2;
+        -ms-grid-row: 3;
+    }
+
+	 .cartpage .cart h4
+    {
+        margin-bottom: 35px;
+    }
+
+.cartpage .shippingAddress .sameAddress
+{
+    margin-top: -35px;
+    color: #808080;
+	font-size: 9pt;
+}*/
+
+.cartpage .cart em {
+    font-style: normal;
+    text-align: left;
+    font-size: 12pt;
+}
+
+.cartpage .cart th {
+    font-weight: 100;
+    text-align: left;
+}
+
+.cartpage .cart .costs {
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
+}
+
+.orderConfirmation .cart .costs {
+    margin: 0 50px;
+}
+
+.cartpage .cart em, .cartpage .cart h4 {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cartpage .items {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-columns: (90px 200px) [3];
+    display: -ms-grid;
+}
+
+.cartpage #item1 {
+    -ms-grid-column: 1;
+}
+
+.cartpage #item2 {
+    -ms-grid-column: 3;
+}
+
+.cartpage .itemColumn {
+    position: relative;
+    margin-left: 30px;
+    width: 200px;
+    height: 550px;
+    margin-top: 80px;
+}
+
+.cartpage .itemColumn hgroup {
+    height: 50px;
+    text-align: center;
+}
+
+.cartpage .itemColumn hgroup h2 {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    font-size: 14pt;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.cartpage .itemColumn hgroup h3 {
+    width: auto;
+    display: block;
+    color: #333;
+    font-weight: 100;
+    font-size: 12pt;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-bottom: 2px dotted #333;
+    padding-bottom: 5px;
+}
+
+.cartpage .itemColumn hgroup h3 input {
+    max-width: 30px;
+    min-width: 25px;
+    text-align: center;
+}
+
+.cartpage .itemImage {
+    margin-top: 40px;
+    margin-left: 45px;
+}
+
+.cartpage .itemImage img {
+    height: 330px;
+}
+
+.cartpage .itemOptions {
+    padding: 5px 30px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .cartpage {
+        overflow-y: scroll;
+        height: 768px;
+    }
+
+    .cartpage header h1 {
+        font-size: 18pt;
+        color: #999;
+        margin: 10px 0 0 60px;
+    }
+
+    .cartpage section[role=main] {
+        padding: 0;
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .cartpage section h3 {
+        font-size: 18pt;
+        color: #333;
+        margin: 0 0 10px 60px;
+    }
+
+    .cartpage .cart, .orderConfirmation .cartpage .cart {
+        -ms-transform: none;
+        padding: 10px 40px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        background-color: transparent;
+    }
+
+    .orderConfirmation .cartpage .cart {
+        padding-left: 0;
+    }
+
+    .cartpage .cart button, .orderConfirmation .cartpage .cart button {
+        margin-bottom: 0;
+        -ms-transform: none;
+    }
+
+    .cartpage .cart .checkout {
+        margin-top: 0;
+    }
+
+    .cartpage .cart .continue {
+        margin-top: 0;
+        position: absolute;
+        top: 20px;
+    }
+
+    .orderConfirmation .cartpage .cart .continue {
+        top: -10px;
+    }
+
+    .cartpage .itemColumn {
+        height: 140px;
+        margin: 0;
+        width: 280px;
+    }
+
+    .cartpage .itemColumn .itemImage {
+        margin: 0;
+        height: 100px;
+    }
+
+    .cartpage .itemColumn .itemImage img {
+        height: 100px;
+        position: absolute;
+        margin: 0;
+        top: 30px;
+    }
+
+    .cartpage .itemColumn hgroup h2 {
+        text-align: left;
+        margin-bottom: 90px;
+    }
+
+    .cartpage .itemColumn hgroup h3 {
+        text-align: right;
+        margin-top: -25px;
+    }
+
+    .cartpage .itemColumn hgroup input {
+        margin: 10px 10px 0 10px;
+    }
+
+    .cartpage .itemColumn hgroup span {
+        margin-right: 10px;
+    }
+
+    .cartpage .items {
+        display: block;
+    }
+
+    .cartpage .itemOptions {
+        display: none;
+    }
+
+    .orderConfirmation .cart .billingAddress, .orderConfirmation .cart .shippingAddress,  {
+        float: none;
+        transform: none;
+    }
+
+    .orderConfirmation .cart .shippingAddress {
+        margin-left: 10px;
+    }
+
+    .orderConfirmation .cart table, .cartpage .cart table {
+        width: 300px;
+        transform: none;
+    }
+
+    .cartpage .total {
+        transform: none;
+    }
+
+    .cartpage h3.cartshow, .cartpage h3.carthide {
+        display: none;
+    }
+
+    .cartpage hgroup, .orderConfirmation hgroup {
+        margin-top: 0;
+    }
+
+    .cartpage header h1 {
+        font-size: 20pt;
+        font-weight: 600;
+        -ms-transform: none;
+        overflow: visible;
+        color: rgb(96, 87, 76);
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .cartpage .cart .costs{
+     
+    }
+    .orderConfirmation .cart .billingAddress, .orderConfirmation .cart .shippingAddress{
+        transform: none;
+    }
+}

@@ -1,0 +1,283 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+
+@media screen and (-ms-view-state: filled), screen and (-ms-view-state: fullscreen-landscape) {
+    /* semantic zoomed page styles*/
+    .categoriespage .zoomColumn {
+        height: 800px;
+        position: relative;
+        width: 305px;
+        margin-left: 10px;
+    }
+
+    .categoriespage .zoomColumn hgroup {
+        height: 50px;
+        padding-top: 75px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: 5px;
+    }
+
+    .categoriespage .zoomColumn hgroup h3 {
+        border-bottom: 2px dotted #333;
+        color: #333;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .win-semanticzoom {
+        height: 768px;
+    }
+
+    /* Regular page styles*/
+
+    .categoriespage .itemColumn {
+        height: 800px;
+        margin-left: 10px;
+        position: relative;
+        width: 410px;
+    }
+
+    .categoriespage .itemColumn hgroup {
+        background: #e3dfd6;
+        color: #333;
+        position: absolute;
+        right: 60px;
+        padding: 5px 10px 5px 15px;
+        text-align: left;
+        top: 540px;
+        -ms-transform: skew(-2deg);
+        width: auto;
+    }
+
+    .categoriespage .itemColumn hgroup h3 {
+        font-size: 18pt;
+    }
+
+    .categoriespage .itemColumn hgroup h4 {
+        font-size: 16pt;
+    }
+
+    .categoriespage .itemColumn .itemDesc {
+        background: #e3dfd6;
+        bottom: 90px;
+        color: #333;
+        height: auto;
+        left: 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 15px 20px;
+        position: absolute;
+        -ms-transform: skew(-2deg);
+        width: 290px;
+    }
+
+    .categoriespage .itemColumn .itemDesc p {
+        font-size: 12pt;
+        line-height: 11pt;
+        margin: 0 !important;
+        text-overflow: ellipsis;
+    }
+
+    .categoriespage .itemColumn img {
+        width: 360px;
+        background: #eee;
+    }
+
+    .categoriespage .itemColumn .thumbnailImage {
+        display: none;
+    }
+    
+    .win-listview > .win-horizontal .win-container {
+        margin-top: 0 !important;
+    }
+
+    .win-listview .win-groupheader {
+        margin-left: 50px;
+    }
+
+    .categoriespage .zoomcontrol,
+    .categoriespage .productslist,
+    .categoriespage .categorieslist {
+        height: 100%;
+        width: 100%;
+    }
+
+    .categoriespage section[role=main] .filterarea .filterbar {
+        list-style-type: none;
+    }
+
+    .categoriespage section[role=main] .filterarea .filterbar li {
+        /*margin-top: 5px;*/
+        opacity: 0.6;
+    }
+
+    .categoriespage section[role=main] .filterarea .filterbar li.highlight,
+    .categoriespage section[role=main] .filterarea .filterbar li:hover {
+        opacity: 1.00;
+    }
+
+    /* Hide the <select> filter list. It will be shown in snapped mode only. */
+    .categoriespage section[role=main] .filterarea .filterselect {
+        display: none;
+    }
+
+    /* This selector is used to prevent ui-dark/light.css from overwriting changes to .win-surface.  */
+    .categoriespage .productslist .win-horizontal.win-viewport .win-surface, .categoriespage .categorieslist .win-horizontal.win-viewport .win-surface {
+        margin-left: -30px;
+        margin-right: 115px;
+    }
+
+    .categoriespage .productslist .win-groupheader {
+        padding: 0;
+        z-index: 1000;
+    }
+
+    /* Use grid and top level layout for truncation */
+    .categoriespage .productslist .group-header {
+        -ms-grid-columns: minmax(0, max-content) 7px max-content;
+        -ms-grid-rows: max-content;
+        display: -ms-inline-grid;
+        line-height: 1.5;
+    }
+
+    /* Override default button styles */
+    .categoriespage .productslist .group-header, .group-header:hover, .group-header:hover:active {
+        background: transparent;
+        border: 0;
+        margin-bottom: 1px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 1px;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .categoriespage .productslist .group-header .group-title {
+        display: inline-block;
+    }
+
+    .categoriespage .productslist .group-header .group-chevron {
+        -ms-grid-column: 3;
+        display: inline-block;
+    }
+
+    .categoriespage .productslist .group-header .group-chevron::before {
+        content: "\E26B";
+        font-family: 'Segoe UI Symbol';
+    }
+
+
+}
+
+@media (-ms-view-state: snapped) {
+
+    .categoriespage .win-listview > .win-vertical.win-viewport {
+        overflow-y: inherit;
+    }
+
+    .categoriespage section[role=main] {
+        position: relative !important;
+        width: 300px;
+    }
+
+    .categoriespage .productslist .win-horizontal.win-viewport .win-surface, .categoriespage .categorieslist .win-horizontal.win-viewport .win-surface {
+        margin: 0;
+        width: 100%;
+    }
+
+    .categoriespage .win-listview > .win-vertical .win-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+     .categoriespage section[role=main] .filterarea .filterselect {
+        display: none;
+    }
+    .categoriespage .itemColumn {
+           -ms-grid-columns: 100px 150px;
+        -ms-grid-rows: 100px;
+        display: -ms-grid;
+        max-height: 110px;
+        height: 110px !important;
+        margin-left: 0px;
+        position: static;
+        padding: 5px 0 5px 10px;
+        background: #d5cdc3;
+        overflow: hidden;
+        float: left;
+        width: 280px;  
+    }
+
+    .categoriespage .itemColumn img {
+        -ms-grid-column: 1;
+        height: 95px;
+        width: 90px;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        padding: 0;
+        -ms-transform: skew(2deg);
+        background: #eee;
+    }
+
+    .categoriespage .itemColumn .fullImage {
+        display: none;
+    }
+
+    .categoriespage .itemColumn .itemImage {
+        padding-top: 5px;
+    }
+
+    .categoriespage .itemColumn hgroup {
+       max-height: 40px;
+        width: 90%;
+        -ms-grid-column: 2;
+        position: relative;
+        left: 0;
+        padding: 0;
+        text-align: left;
+        top: 0;
+        background-color: transparent;
+        -ms-grid-row: 1;
+        padding-left: 0;
+        margin-top: 10px;
+       
+    }
+
+    .categoriespage .itemColumn hgroup h3, .categoriespage .itemColumn hgroup h4 {
+        
+        color: #333;
+        display: inline-block;
+        font-size: 14pt;
+        font-weight: 600;
+        line-height: 12pt;
+        padding: 5px;
+    }
+
+    .categoriespage .itemColumn .itemDesc {
+       display: none;
+    }
+
+    .win-semanticzoom {
+        height: 768px;
+    }
+ 
+    #categoriesAppbar button{
+        left: 30px;
+        position: relative;
+    }
+    
+    #categoriesAppbar{
+      height: 150px;
+    }
+}

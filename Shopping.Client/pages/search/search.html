@@ -1,0 +1,91 @@
+﻿<!--*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+*************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="Search" />
+    <title>Search Results</title>
+
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/search/search.css" rel="stylesheet" />
+
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+    <script src="/Scripts/underscore.js"></script>
+
+    <script src="/js/offline_services.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/binding.js"></script>
+    <script src="/js/designModeShim.js"></script>
+    <script src="/controls/simplelist.js"></script>
+    <script src="/controls/filterbar.js"></script>
+
+    <script src="/pages/search/search.js"></script>
+</head>
+<body>
+    <!-- This template is used to display each item in the ListView declared
+         below. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="itemColumn">
+            <hgroup>
+                <h2 class="item-title" data-win-bind="innerHTML: Name search.markText"></h2>
+                <h3 class="item-price" data-win-bind="textContent: Price Shopping.Binding.currencyConverter"></h3>
+            </hgroup>
+            <div class="itemImage">
+                <img class="mainImage" data-win-bind="src: Image; alt: Name" />
+                <img class="thumbnailImage" data-win-bind="src: ThumbnailImage; alt: Name" />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="search fragment">
+        <header aria-label="Header content" role="banner">
+            <hgroup class="titlearea">
+                <h1 class="pagetitle" data-win-bind="">Search Results for</h1>
+                <h2 class="pagesubtitle win-type-ellipsis"><span class="searchItemCount"></span> Results for <span class="searchTerm">Men</span></h2>
+            </hgroup>
+        </header>
+        <nav>
+            <button type="button" id="backButton" aria-label="Back"></button>
+        </nav>
+
+        <section aria-label="Main content" role="main">
+            <div class="resultsmessage win-type-x-large">No results match your search.</div>
+            <div class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+
+            <div id="filterCategoryPopup" data-win-control="WinJS.UI.Flyout">
+                <div id="filterCategoryBar" data-win-control="Shopping.Controls.FilterBar"></div>
+            </div>
+            <div id="filterRatingPopup" data-win-control="WinJS.UI.Flyout">
+                <div id="filterRatingBar" data-win-control="Shopping.Controls.FilterBar" data-win-options="{ includeEmpty: true }"></div>
+            </div>
+            <div id="filterPricePopup" data-win-control="WinJS.UI.Flyout">
+                <div id="filterPriceBar" data-win-control="Shopping.Controls.FilterBar" data-win-options="{ includeEmpty: true }"></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="searchAppbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'filterCategory', label:'Filter by Category', section:'selection', icon:'filter'}" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'filterRating', label:'Filter by Rating', section:'selection', icon:'filter'}" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'filterPrice', label:'Filter by Price', section:'selection', icon:'filter'}" type="button"></button>
+    </div>
+</body>
+</html>

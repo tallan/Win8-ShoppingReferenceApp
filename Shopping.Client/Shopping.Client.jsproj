@@ -1,0 +1,1517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>e1cdecd9-4cbb-493e-9177-35f94c1775ba</ProjectGuid>
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>Shopping.Client_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>B598DBAC9F0F127B8066E921057AFEC2244AD15B</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\Shopping.WebApi\Images\Appbar\head.png">
+      <Link>images\OfflineImages\Appbar\head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Appbar\leg.png">
+      <Link>images\OfflineImages\Appbar\leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Appbar\neck.png">
+      <Link>images\OfflineImages\Appbar\neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Appbar\shoulder.png">
+      <Link>images\OfflineImages\Appbar\shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Appbar\sole.png">
+      <Link>images\OfflineImages\Appbar\sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\1_head.png">
+      <Link>images\OfflineImages\Areas\1_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\1_leg.png">
+      <Link>images\OfflineImages\Areas\1_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\1_neck.png">
+      <Link>images\OfflineImages\Areas\1_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\1_shoulder.png">
+      <Link>images\OfflineImages\Areas\1_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\1_sole.png">
+      <Link>images\OfflineImages\Areas\1_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\2_head.png">
+      <Link>images\OfflineImages\Areas\2_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\2_leg.png">
+      <Link>images\OfflineImages\Areas\2_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\2_neck.png">
+      <Link>images\OfflineImages\Areas\2_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\2_shoulder.png">
+      <Link>images\OfflineImages\Areas\2_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\2_sole.png">
+      <Link>images\OfflineImages\Areas\2_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\3_head.png">
+      <Link>images\OfflineImages\Areas\3_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\3_leg.png">
+      <Link>images\OfflineImages\Areas\3_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\3_neck.png">
+      <Link>images\OfflineImages\Areas\3_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\3_shoulder.png">
+      <Link>images\OfflineImages\Areas\3_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\3_sole.png">
+      <Link>images\OfflineImages\Areas\3_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\4_head.png">
+      <Link>images\OfflineImages\Areas\4_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\4_leg.png">
+      <Link>images\OfflineImages\Areas\4_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\4_neck.png">
+      <Link>images\OfflineImages\Areas\4_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\4_shoulder.png">
+      <Link>images\OfflineImages\Areas\4_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\4_sole.png">
+      <Link>images\OfflineImages\Areas\4_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\5_head.png">
+      <Link>images\OfflineImages\Areas\5_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\5_leg.png">
+      <Link>images\OfflineImages\Areas\5_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\5_neck.png">
+      <Link>images\OfflineImages\Areas\5_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\5_shoulder.png">
+      <Link>images\OfflineImages\Areas\5_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\5_sole.png">
+      <Link>images\OfflineImages\Areas\5_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\6_head.png">
+      <Link>images\OfflineImages\Areas\6_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\6_leg.png">
+      <Link>images\OfflineImages\Areas\6_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\6_neck.png">
+      <Link>images\OfflineImages\Areas\6_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\6_shoulder.png">
+      <Link>images\OfflineImages\Areas\6_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\6_sole.png">
+      <Link>images\OfflineImages\Areas\6_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\7_head.png">
+      <Link>images\OfflineImages\Areas\7_head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\7_leg.png">
+      <Link>images\OfflineImages\Areas\7_leg.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\7_neck.png">
+      <Link>images\OfflineImages\Areas\7_neck.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\7_shoulder.png">
+      <Link>images\OfflineImages\Areas\7_shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\7_sole.png">
+      <Link>images\OfflineImages\Areas\7_sole.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\head.png">
+      <Link>images\OfflineImages\Areas\head.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Areas\shoulder.png">
+      <Link>images\OfflineImages\Areas\shoulder.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\1_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\1_product.png">
+      <Link>images\OfflineImages\Products\Blazer\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\1_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\1_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\2_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\2_product.png">
+      <Link>images\OfflineImages\Products\Blazer\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\2_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\2_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\3_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\3_product.png">
+      <Link>images\OfflineImages\Products\Blazer\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\3_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\3_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\4_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\4_product.png">
+      <Link>images\OfflineImages\Products\Blazer\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\4_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\4_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\5_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\5_product.png">
+      <Link>images\OfflineImages\Products\Blazer\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\5_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\5_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\6_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\6_product.png">
+      <Link>images\OfflineImages\Products\Blazer\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\6_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\6_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\7_browse.png">
+      <Link>images\OfflineImages\Products\Blazer\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\7_product.png">
+      <Link>images\OfflineImages\Products\Blazer\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\7_tb.png">
+      <Link>images\OfflineImages\Products\Blazer\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Blazer\7_zoom.png">
+      <Link>images\OfflineImages\Products\Blazer\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\1_browse.png">
+      <Link>images\OfflineImages\Products\Hat\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\1_product.png">
+      <Link>images\OfflineImages\Products\Hat\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\1_tb.png">
+      <Link>images\OfflineImages\Products\Hat\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\1_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\2_browse.png">
+      <Link>images\OfflineImages\Products\Hat\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\2_product.png">
+      <Link>images\OfflineImages\Products\Hat\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\2_tb.png">
+      <Link>images\OfflineImages\Products\Hat\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\2_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\3_browse.png">
+      <Link>images\OfflineImages\Products\Hat\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\3_product.png">
+      <Link>images\OfflineImages\Products\Hat\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\3_tb.png">
+      <Link>images\OfflineImages\Products\Hat\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\3_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\4_browse.png">
+      <Link>images\OfflineImages\Products\Hat\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\4_product.png">
+      <Link>images\OfflineImages\Products\Hat\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\4_tb.png">
+      <Link>images\OfflineImages\Products\Hat\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\4_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\5_browse.png">
+      <Link>images\OfflineImages\Products\Hat\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\5_product.png">
+      <Link>images\OfflineImages\Products\Hat\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\5_tb.png">
+      <Link>images\OfflineImages\Products\Hat\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\5_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\6_browse.png">
+      <Link>images\OfflineImages\Products\Hat\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\6_product.png">
+      <Link>images\OfflineImages\Products\Hat\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\6_tb.png">
+      <Link>images\OfflineImages\Products\Hat\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\6_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\7_browse.png">
+      <Link>images\OfflineImages\Products\Hat\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\7_product.png">
+      <Link>images\OfflineImages\Products\Hat\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\7_tb.png">
+      <Link>images\OfflineImages\Products\Hat\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Hat\7_zoom.png">
+      <Link>images\OfflineImages\Products\Hat\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\1_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\1_product.png">
+      <Link>images\OfflineImages\Products\Jacket\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\1_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\1_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\2_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\2_product.png">
+      <Link>images\OfflineImages\Products\Jacket\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\2_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\2_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\3_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\3_product.png">
+      <Link>images\OfflineImages\Products\Jacket\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\3_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\3_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\4_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\4_product.png">
+      <Link>images\OfflineImages\Products\Jacket\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\4_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\4_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\5_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\5_product.png">
+      <Link>images\OfflineImages\Products\Jacket\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\5_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\5_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\6_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\6_product.png">
+      <Link>images\OfflineImages\Products\Jacket\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\6_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\6_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\7_browse.png">
+      <Link>images\OfflineImages\Products\Jacket\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\7_product.png">
+      <Link>images\OfflineImages\Products\Jacket\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\7_tb.png">
+      <Link>images\OfflineImages\Products\Jacket\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jacket\7_zoom.png">
+      <Link>images\OfflineImages\Products\Jacket\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\1_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\1_product.png">
+      <Link>images\OfflineImages\Products\Jeans\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\1_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\1_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\1_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\1_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\2_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\2_product.png">
+      <Link>images\OfflineImages\Products\Jeans\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\2_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\2_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\2_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\2_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\3_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\3_product.png">
+      <Link>images\OfflineImages\Products\Jeans\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\3_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\3_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\3_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\3_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\4_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\4_product.png">
+      <Link>images\OfflineImages\Products\Jeans\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\4_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\4_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\4_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\4_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\5_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\5_product.png">
+      <Link>images\OfflineImages\Products\Jeans\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\5_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\5_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\5_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\5_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\6_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\6_product.png">
+      <Link>images\OfflineImages\Products\Jeans\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\6_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\6_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\6_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\6_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\7_browse.png">
+      <Link>images\OfflineImages\Products\Jeans\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\7_product.png">
+      <Link>images\OfflineImages\Products\Jeans\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\7_tb.png">
+      <Link>images\OfflineImages\Products\Jeans\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\7_tb_b.png">
+      <Link>images\OfflineImages\Products\Jeans\7_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Jeans\7_zoom.png">
+      <Link>images\OfflineImages\Products\Jeans\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\1_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\1_product.png">
+      <Link>images\OfflineImages\Products\Loafers\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\1_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\1_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\2_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\2_product.png">
+      <Link>images\OfflineImages\Products\Loafers\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\2_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\2_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\3_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\3_product.png">
+      <Link>images\OfflineImages\Products\Loafers\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\3_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\3_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\4_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\4_product.png">
+      <Link>images\OfflineImages\Products\Loafers\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\4_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\4_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\5_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\5_product.png">
+      <Link>images\OfflineImages\Products\Loafers\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\5_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\5_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\6_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\6_product.png">
+      <Link>images\OfflineImages\Products\Loafers\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\6_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\6_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\7_browse.png">
+      <Link>images\OfflineImages\Products\Loafers\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\7_product.png">
+      <Link>images\OfflineImages\Products\Loafers\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\7_tb.png">
+      <Link>images\OfflineImages\Products\Loafers\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Loafers\7_zoom.png">
+      <Link>images\OfflineImages\Products\Loafers\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\1_browse.png">
+      <Link>images\OfflineImages\Products\Pants\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\1_product.png">
+      <Link>images\OfflineImages\Products\Pants\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\1_tb.png">
+      <Link>images\OfflineImages\Products\Pants\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\1_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\1_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\1_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\2_browse.png">
+      <Link>images\OfflineImages\Products\Pants\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\2_product.png">
+      <Link>images\OfflineImages\Products\Pants\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\2_tb.png">
+      <Link>images\OfflineImages\Products\Pants\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\2_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\2_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\2_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\3_browse.png">
+      <Link>images\OfflineImages\Products\Pants\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\3_product.png">
+      <Link>images\OfflineImages\Products\Pants\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\3_tb.png">
+      <Link>images\OfflineImages\Products\Pants\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\3_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\3_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\3_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\4_browse.png">
+      <Link>images\OfflineImages\Products\Pants\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\4_product.png">
+      <Link>images\OfflineImages\Products\Pants\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\4_tb.png">
+      <Link>images\OfflineImages\Products\Pants\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\4_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\4_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\4_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\5_browse.png">
+      <Link>images\OfflineImages\Products\Pants\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\5_product.png">
+      <Link>images\OfflineImages\Products\Pants\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\5_tb.png">
+      <Link>images\OfflineImages\Products\Pants\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\5_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\5_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\5_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\6_browse.png">
+      <Link>images\OfflineImages\Products\Pants\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\6_product.png">
+      <Link>images\OfflineImages\Products\Pants\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\6_tb.png">
+      <Link>images\OfflineImages\Products\Pants\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\6_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\6_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\6_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\7_browse.png">
+      <Link>images\OfflineImages\Products\Pants\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\7_product.png">
+      <Link>images\OfflineImages\Products\Pants\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\7_tb.png">
+      <Link>images\OfflineImages\Products\Pants\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\7_tb_b.png">
+      <Link>images\OfflineImages\Products\Pants\7_tb_b.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Pants\7_zoom.png">
+      <Link>images\OfflineImages\Products\Pants\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\1_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\1_product.png">
+      <Link>images\OfflineImages\Products\Scarf\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\1_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\1_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\2_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\2_product.png">
+      <Link>images\OfflineImages\Products\Scarf\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\2_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\2_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\3_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\3_product.png">
+      <Link>images\OfflineImages\Products\Scarf\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\3_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\3_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\4_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\4_product.png">
+      <Link>images\OfflineImages\Products\Scarf\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\4_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\4_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\5_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\5_product.png">
+      <Link>images\OfflineImages\Products\Scarf\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\5_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\5_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\6_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\6_product.png">
+      <Link>images\OfflineImages\Products\Scarf\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\6_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\6_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\7_browse.png">
+      <Link>images\OfflineImages\Products\Scarf\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\7_product.png">
+      <Link>images\OfflineImages\Products\Scarf\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\7_tb.png">
+      <Link>images\OfflineImages\Products\Scarf\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Scarf\7_zoom.png">
+      <Link>images\OfflineImages\Products\Scarf\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\1_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\1_product.png">
+      <Link>images\OfflineImages\Products\Shirt\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\1_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\1_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\2_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\2_product.png">
+      <Link>images\OfflineImages\Products\Shirt\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\2_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\2_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\3_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\3_product.png">
+      <Link>images\OfflineImages\Products\Shirt\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\3_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\3_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\4_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\4_product.png">
+      <Link>images\OfflineImages\Products\Shirt\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\4_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\4_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\5_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\5_product.png">
+      <Link>images\OfflineImages\Products\Shirt\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\5_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\5_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\6_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\6_product.png">
+      <Link>images\OfflineImages\Products\Shirt\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\6_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\6_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\7_browse.png">
+      <Link>images\OfflineImages\Products\Shirt\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\7_product.png">
+      <Link>images\OfflineImages\Products\Shirt\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\7_tb.png">
+      <Link>images\OfflineImages\Products\Shirt\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shirt\7_zoom.png">
+      <Link>images\OfflineImages\Products\Shirt\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\1_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\1_product.png">
+      <Link>images\OfflineImages\Products\Shoes\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\1_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\1_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\2_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\2_product.png">
+      <Link>images\OfflineImages\Products\Shoes\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\2_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\2_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\3_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\3_product.png">
+      <Link>images\OfflineImages\Products\Shoes\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\3_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\3_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\4_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\4_product.png">
+      <Link>images\OfflineImages\Products\Shoes\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\4_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\4_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\5_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\5_product.png">
+      <Link>images\OfflineImages\Products\Shoes\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\5_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\5_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\6_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\6_product.png">
+      <Link>images\OfflineImages\Products\Shoes\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\6_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\6_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\7_browse.png">
+      <Link>images\OfflineImages\Products\Shoes\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\7_product.png">
+      <Link>images\OfflineImages\Products\Shoes\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\7_tb.png">
+      <Link>images\OfflineImages\Products\Shoes\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Shoes\7_zoom.png">
+      <Link>images\OfflineImages\Products\Shoes\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\1_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\1_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\1_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\1_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\2_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\2_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\2_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\2_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\3_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\3_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\3_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\3_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\4_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\4_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\4_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\4_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\5_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\5_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\5_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\5_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\6_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\6_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\6_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\6_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\7_browse.png">
+      <Link>images\OfflineImages\Products\Sneakers\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\7_product.png">
+      <Link>images\OfflineImages\Products\Sneakers\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\7_tb.png">
+      <Link>images\OfflineImages\Products\Sneakers\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sneakers\7_zoom.png">
+      <Link>images\OfflineImages\Products\Sneakers\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\1_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\1_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\1_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\1_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\2_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\2_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\2_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\2_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\3_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\3_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\3_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\3_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\4_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\4_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\4_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\4_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\5_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\5_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\5_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\5_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\6_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\6_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\6_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\6_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\7_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\7_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\7_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\7_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\8_browse.png">
+      <Link>images\OfflineImages\Products\Sunglasses\8_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\8_product.png">
+      <Link>images\OfflineImages\Products\Sunglasses\8_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\8_tb.png">
+      <Link>images\OfflineImages\Products\Sunglasses\8_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sunglasses\8_zoom.png">
+      <Link>images\OfflineImages\Products\Sunglasses\8_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\1_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\1_product.png">
+      <Link>images\OfflineImages\Products\Sweater\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\1_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\1_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\2_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\2_product.png">
+      <Link>images\OfflineImages\Products\Sweater\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\2_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\2_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\3_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\3_product.png">
+      <Link>images\OfflineImages\Products\Sweater\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\3_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\3_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\4_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\4_product.png">
+      <Link>images\OfflineImages\Products\Sweater\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\4_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\4_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\5_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\5_product.png">
+      <Link>images\OfflineImages\Products\Sweater\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\5_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\5_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\6_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\6_product.png">
+      <Link>images\OfflineImages\Products\Sweater\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\6_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\6_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\7_browse.png">
+      <Link>images\OfflineImages\Products\Sweater\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\7_product.png">
+      <Link>images\OfflineImages\Products\Sweater\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\7_tb.png">
+      <Link>images\OfflineImages\Products\Sweater\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Sweater\7_zoom.png">
+      <Link>images\OfflineImages\Products\Sweater\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\1_browse.png">
+      <Link>images\OfflineImages\Products\Tie\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\1_product.png">
+      <Link>images\OfflineImages\Products\Tie\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\1_tb.png">
+      <Link>images\OfflineImages\Products\Tie\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\1_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\2_browse.png">
+      <Link>images\OfflineImages\Products\Tie\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\2_product.png">
+      <Link>images\OfflineImages\Products\Tie\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\2_tb.png">
+      <Link>images\OfflineImages\Products\Tie\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\2_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\3_browse.png">
+      <Link>images\OfflineImages\Products\Tie\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\3_product.png">
+      <Link>images\OfflineImages\Products\Tie\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\3_tb.png">
+      <Link>images\OfflineImages\Products\Tie\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\3_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\4_browse.png">
+      <Link>images\OfflineImages\Products\Tie\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\4_product.png">
+      <Link>images\OfflineImages\Products\Tie\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\4_tb.png">
+      <Link>images\OfflineImages\Products\Tie\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\4_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\5_browse.png">
+      <Link>images\OfflineImages\Products\Tie\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\5_product.png">
+      <Link>images\OfflineImages\Products\Tie\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\5_tb.png">
+      <Link>images\OfflineImages\Products\Tie\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\5_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\6_browse.png">
+      <Link>images\OfflineImages\Products\Tie\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\6_product.png">
+      <Link>images\OfflineImages\Products\Tie\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\6_tb.png">
+      <Link>images\OfflineImages\Products\Tie\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\6_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\7_browse.png">
+      <Link>images\OfflineImages\Products\Tie\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\7_product.png">
+      <Link>images\OfflineImages\Products\Tie\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\7_tb.png">
+      <Link>images\OfflineImages\Products\Tie\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\Tie\7_zoom.png">
+      <Link>images\OfflineImages\Products\Tie\7_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\1_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\1_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\1_product.png">
+      <Link>images\OfflineImages\Products\TShirt\1_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\1_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\1_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\1_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\1_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\2_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\2_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\2_product.png">
+      <Link>images\OfflineImages\Products\TShirt\2_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\2_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\2_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\2_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\2_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\3_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\3_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\3_product.png">
+      <Link>images\OfflineImages\Products\TShirt\3_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\3_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\3_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\3_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\3_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\4_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\4_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\4_product.png">
+      <Link>images\OfflineImages\Products\TShirt\4_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\4_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\4_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\4_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\4_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\5_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\5_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\5_product.png">
+      <Link>images\OfflineImages\Products\TShirt\5_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\5_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\5_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\5_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\5_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\6_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\6_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\6_product.png">
+      <Link>images\OfflineImages\Products\TShirt\6_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\6_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\6_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\6_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\6_zoom.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\7_browse.png">
+      <Link>images\OfflineImages\Products\TShirt\7_browse.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\7_product.png">
+      <Link>images\OfflineImages\Products\TShirt\7_product.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\7_tb.png">
+      <Link>images\OfflineImages\Products\TShirt\7_tb.png</Link>
+    </Content>
+    <Content Include="..\Shopping.WebApi\Images\Products\TShirt\7_zoom.png">
+      <Link>images\OfflineImages\Products\TShirt\7_zoom.png</Link>
+    </Content>
+    <Content Include="controls\filterbar.js" />
+    <Content Include="controls\simplelist.js" />
+    <Content Include="css\default.css" />
+    <Content Include="css\images\backbutton.png" />
+    <Content Include="css\images\bg.png" />
+    <Content Include="css\images\img_noInternet.png" />
+    <Content Include="css\images\loading_filled.png" />
+    <Content Include="css\images\paused.png" />
+    <Content Include="images\badge.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\OfflineImages\info.txt" />
+    <Content Include="images\TallanLogo.png" />
+    <Content Include="images\wide.png" />
+    <Content Include="images\small.png" />
+    <Content Include="images\splash.png" />
+    <Content Include="images\tinyLogo.png" />
+    <Content Include="js\api.js" />
+    <Content Include="js\binding.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\designModeShim.js" />
+    <Content Include="js\extendedSplash.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="js\noInternet.js" />
+    <Content Include="js\offline_services.js" />
+    <Content Include="js\services.js" />
+    <Content Include="js\sharingProvider.js" />
+    <Content Include="js\tileUpdater.js" />
+    <Content Include="pages\settings\settings-flyout.html" />
+    <Content Include="pages\settings\settings-flyout.js" />
+    <Content Include="pages\thankYou\thankYou.css" />
+    <Content Include="pages\thankYou\thankYou.html" />
+    <Content Include="pages\thankYou\thankYou.js" />
+    <None Include="Shopping.Client_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="packages.config" />
+    <Content Include="pages\billingEntry\billingEntry.css" />
+    <Content Include="pages\billingEntry\billingEntry.html" />
+    <Content Include="pages\billingEntry\billingEntry.js" />
+    <Content Include="pages\billingEntry\billingEntryViewModel.js" />
+    <Content Include="pages\cart\cartViewModel.js" />
+    <Content Include="pages\cart\cart.css" />
+    <Content Include="pages\cart\cart.html" />
+    <Content Include="pages\cart\cart.js" />
+    <Content Include="pages\home\homeViewModel.js" />
+    <Content Include="pages\categories\categoriesViewModel.js" />
+    <Content Include="pages\categories\categories.css" />
+    <Content Include="pages\categories\categories.html" />
+    <Content Include="pages\categories\categories.js" />
+    <Content Include="pages\productDetail\productDetailViewModel.js" />
+    <Content Include="pages\productDetail\productDetail.css" />
+    <Content Include="pages\productDetail\productDetail.html" />
+    <Content Include="pages\productDetail\productDetail.js" />
+    <Content Include="pages\home\home.css" />
+    <Content Include="pages\home\home.html" />
+    <Content Include="pages\home\home.js" />
+    <Content Include="default.html" />
+    <Content Include="pages\search\search.css" />
+    <Content Include="pages\search\search.html" />
+    <Content Include="pages\search\search.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="LiveSDKHTML, Version=5.0" />
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\OfflineImages\Areas\" />
+    <Folder Include="images\OfflineImages\Appbar\" />
+    <Folder Include="images\OfflineImages\Products\Blazer\" />
+    <Folder Include="images\OfflineImages\Products\Hat\" />
+    <Folder Include="images\OfflineImages\Products\Jacket\" />
+    <Folder Include="images\OfflineImages\Products\Jeans\" />
+    <Folder Include="images\OfflineImages\Products\Loafers\" />
+    <Folder Include="images\OfflineImages\Products\TShirt\" />
+    <Folder Include="images\OfflineImages\Products\Tie\" />
+    <Folder Include="images\OfflineImages\Products\Sweater\" />
+    <Folder Include="images\OfflineImages\Products\Sunglasses\" />
+    <Folder Include="images\OfflineImages\Products\Sneakers\" />
+    <Folder Include="images\OfflineImages\Products\Shoes\" />
+    <Folder Include="images\OfflineImages\Products\Shirt\" />
+    <Folder Include="images\OfflineImages\Products\Scarf\" />
+    <Folder Include="images\OfflineImages\Products\Pants\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

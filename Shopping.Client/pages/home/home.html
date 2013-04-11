@@ -1,0 +1,71 @@
+﻿<!--*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+*************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping Reference App Home Page</title>
+    
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+    <script src="/Scripts/underscore.js"></script>
+    
+    <script src="/js/offline_services.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/designModeShim.js"></script>
+    <script src="/controls/simplelist.js"></script>  
+    
+    <script src="/pages/home/homeViewModel.js"></script>
+    <script src="/pages/home/home.js"></script>
+</head>
+    <body>
+        <div class="featuredProductTemplate" data-win-control="WinJS.Binding.Template">
+            <li><a href="/pages/productDetail/productDetail.html" data-win-bind="this['data-state']: ProductId WinJS.Binding.setAttribute"><img  data-win-bind="src: ThumbnailImage; alt: Name"
+                src="#" alt="Head 1" /></a></li>
+        </div>
+        <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="column areaColumn">
+                <a href="/pages/categories/categories.html" class="areaHeader" data-win-bind="this['data-state']: area WinJS.Binding.setAttribute">
+                    <img data-win-bind="src: mainImage; alt: area" />   
+                    <hgroup>
+                        <h3 data-win-bind="textContent: area"></h3>
+                        <h4><span data-win-bind="textContent: itemCount"></span> items</h4>
+                    </hgroup>
+                </a>
+                <div class="areaItems">
+                    <ul class="itemList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="fragment homepage">
+            <header aria-label="Header content" role="banner">
+                <hgroup class="titlearea">
+                    <h1 class="pagetitle">Head to Toe <img id="TallanLink" src="/images/TallanLogo.png" /></h1>
+                </hgroup>
+            </header>
+            <nav style="display: none;">
+                <button type="button" id="backButton" aria-label="Back" disabled>←</button>
+            </nav>
+            <section aria-label="Main content" role="main" data-win-control="Shopping.Controls.SimpleList">
+            </section>
+        </div>
+    </body>
+</html>

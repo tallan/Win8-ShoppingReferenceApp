@@ -1,0 +1,202 @@
+﻿/*************************************************************************
+*
+*    Copyright (c) 2013 Tallan Inc.  All rights reserved. 
+*
+*    Use of this sample source code is subject to the terms of the Microsoft Limited Public License
+*    at http://msdn.microsoft.com/en-us/cc300389.aspx#P and is provided AS-IS. 
+*
+*    For more information about Tallan, visit our website, http://tallan.com/.     
+*
+*    To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/jj635241. 
+*
+************************************************************************/
+
+
+.homepage {
+    height: 100%;
+    width: 100%;
+}
+
+.homepage section {
+    display: -ms-grid;
+    -ms-grid-columns: 75px (360px 20px) [12];
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.areaColumn {
+    width: 360px;
+    max-height: 100%;
+}
+
+.areaColumn:first-child {
+    margin-left: 80px;
+    -ms-grid-column: 1;
+}
+
+.areaColumn:nth-child(2) {
+    -ms-grid-column: 3;
+}
+
+.areaColumn:nth-child(3) {
+    -ms-grid-column: 5;
+}
+
+.areaColumn:nth-child(4) {
+    -ms-grid-column: 7;
+}
+
+.areaColumn:nth-child(5) {
+    -ms-grid-column: 9;
+}
+
+.areaColumn:nth-child(6) {
+    -ms-grid-column: 11;
+}
+
+.areaHeader {
+    width: 360px;
+    overflow: hidden;
+    display: block;
+}
+
+.areaHeader img {
+    height: 340px;
+    width: 360px;
+    background-color: #eee;
+}
+
+.areaHeader hgroup {
+    margin: 0 auto;
+    text-align: center;
+    -ms-transform: skew(-2deg);
+    font-size: 18pt;
+}
+
+.areaHeader hgroup h3 {
+    color: #60574c;
+    display: inline-block;
+    font-size: 16pt;
+}
+
+.areaHeader hgroup h4 {
+    color: #666;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 16pt;
+}
+
+.areaItems {
+    margin-top: 5px;
+}
+
+.itemList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.itemList li {
+    float: left;
+    margin-bottom: 6px;
+    background-color: #eee;
+    padding: 0;
+    height: 177px;
+}
+
+.itemList li:nth-child(odd) {
+    margin-right: 6px;
+     -ms-transform: rotateY(180deg);
+}
+
+.itemList img {
+    height: 177px;
+    width: 177px;
+}
+/*****************snapped view styles*******************/
+@media screen and (-ms-view-state: snapped) {
+
+    .homepage {
+        overflow-x: hidden;
+        display: block;
+        background-image: none;
+        overflow-y: visible;
+    }
+
+    .homepage section {
+        margin-top: -30px;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .homepage section div, .homepage header {
+        display: block;
+    }
+    .homepage header{
+        margin-left: 0px;
+    }
+    .homepage .areaColumn {
+        max-width: 100%;
+        width: 300px;
+        max-height: 100px;
+        border-bottom: 3px dotted;
+        margin-bottom: 20px;
+    }
+
+    .homepage .areaColumn:first-child {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .homepage .areaHeader img {
+        height: 100px;
+        width: 100px;
+        background-color: rgba(0,0,0,0);
+        float: right;
+        margin-right: 80px;
+    }
+
+    .homepage .itemList {
+        display: none;
+    }
+
+    .homepage header {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .homepage header hgroup {
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: 0 50%;
+        width: 300px;
+        position: inherit;
+    }
+
+    .homepage header hgroup h1 {
+        font-weight: 400 !important;
+        margin-left: 0;
+    }
+
+    .homepage .areaHeader hgroup {
+        margin: 0 auto;
+        text-align: center;
+         -ms-transform: none;
+        font-size: 18pt;
+        text-align: left;
+    }
+
+    .homepage .areaHeader hgroup h3 {
+        color: #60574c;
+        display: inline-block;
+        font-size: 16pt;
+        margin-top: 30px;
+    }
+
+    .homepage .areaHeader hgroup h4 {
+        color: #666;
+        display: none;
+        font-size: 16pt;
+    }
+}
