@@ -297,8 +297,6 @@
             /// Handles the 'updateQuantity' type of command.  See processCommandAsync.
             /// </summary>
             command.item.Quantity = command.newQuantity;
-
-            return services().updateCartAsync(this.cart);
         },
         remove: function (command) {
             /// <summary>
@@ -311,8 +309,6 @@
             else {
                 this.cart.Items.splice(command.index, 1);
             }
-            
-            return services().updateCartAsync(this.cart);
         }
     });
 
