@@ -177,13 +177,17 @@
         /// Initialized the top AppBar with the list of areas available from the catalog.  Since these areas are dynamic this is done in javascript
         /// rather than in HTML.
         /// </summary>
-        
+        var cartLabel = function () {
+            var itemCount = Shopping.Api.cart.items().length;
+            return "Cart" + (itemCount > 0 ? " (" + itemCount + ")" : "");
+        };
+
         var topAppBarEl = document.getElementById('topAppBar');
         var topAppBar = topAppBarEl.winControl;
         var commands = [];
 
         var cartEl = document.createElement("button");
-        var cart = new WinJS.UI.AppBarCommand(cartEl, { id: 'CartBtn', label: 'Cart' });
+        var cart = new WinJS.UI.AppBarCommand(cartEl, { id: 'CartBtn', label: cartLabel() });
         cart.addEventListener('click', function() {
             nav.navigate('/pages/cart/cart.html');
         });
@@ -192,7 +196,7 @@
         // create a eventAggregator event listener to update the cart label on the appbar
         var updateCartLabelCallback = function (e) {
             if (e.type == Shopping.Api.eventAggregator.type.AddedToCart) {
-                cart.label = "Cart (" + Shopping.Api.cart.items().length + ")";
+                cart.label = cartLabel();
             }
         };
         Shopping.Api.eventAggregator.subscribe(updateCartLabelCallback);
