@@ -63,8 +63,8 @@
             /// <summary>
             /// Gets the categories by getting a distinct list of categories from all products in the catalog.
             /// </summary>
-            var areaGroups = _.groupBy(this.products, function (p) { return p.Category });
-            return _.map(areaGroups, function (v, k) { return { category: k }; });
+            var categoryGroups = _.groupBy(this.products, function (p) { return p.Category });
+            return _.map(categoryGroups, function (v, k) { return { category: k }; });
         },
         getProductsForArea: function (area) {
             /// <summary>
